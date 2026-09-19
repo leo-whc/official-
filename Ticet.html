@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="si"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEO ROYAL CLUB | Kaviya Gold - Premium Members</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Outfit}
+body{background:#040407;color:#fff;overflow-x:hidden}
+.syne{font-family:Syne}
+.gold-text{background:linear-gradient(90deg,#FFD700,#FFA500,#FFD700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:shine 3s linear infinite}
+@keyframes shine{0%{background-position:0%}100%{background-position:200%}}
+.glass{background:linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03));backdrop-filter:blur(25px);border:1px solid rgba(255,215,0,0.18);box-shadow:0 8px 32px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.1)}
+.member-card{position:relative;border-radius:24px;overflow:hidden;transition:0.4s;cursor:pointer}
+.member-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 60px rgba(255,215,0,0.25)}
+.member-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#FFD700,transparent)}
+.premium-btn{background:linear-gradient(135deg,#FFD700,#FF8C00);color:#000;font-weight:900;padding:10px 16px;border-radius:100px;border:none;box-shadow:0 4px 20px rgba(255,215,0,0.4);transition:0.3s;cursor:pointer}
+.premium-btn:hover{transform:scale(1.05);box-shadow:0 8px 30px rgba(255,215,0,0.6)}
+.social-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:100px;font-size:11px;font-weight:700;text-decoration:none;color:#fff;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);transition:0.2s}
+.social-btn:hover{transform:scale(1.05)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(4,4,7,0.8);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,215,0,0.12);padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
+.hero{min-height:75vh;display:flex;align-items:center;justify-content:center;position:relative;padding:100px 20px 40px;background:radial-gradient(600px at 20% 30%,rgba(255,0,102,0.15),transparent),radial-gradient(800px at 80% 20%,rgba(255,215,0,0.18),transparent),radial-gradient(500px at 50% 80%,rgba(124,58,237,0.12),transparent),#040407}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:100px;background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.3);color:#FFD700;font-size:11px;font-weight:900;letter-spacing:0.5px}
+.input{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,215,0,0.15);border-radius:100px;padding:13px 18px;color:#fff;outline:none;transition:0.3s}
+.input:focus{border-color:#FFD700;background:rgba(255,215,0,0.08);box-shadow:0 0 20px rgba(255,215,0,0.15)}
+</style>
+</head><body>
+
+<div class="nav">
+<div style="display:flex;gap:12px;align-items:center">
+<div style="width:42px;height:42px;background:linear-gradient(135deg,#FFD700,#FF8C00);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 15px rgba(255,215,0,0.4)">🦁</div>
+<div><div class="syne" style="font-weight:800;font-size:15px;letter-spacing:-0.5px">LEO ROYAL</div><div style="font-size:8px;opacity:0.5;letter-spacing:2px;font-weight:700">KAVIYA GOLD • PREMIUM</div></div>
+</div>
+<div style="display:flex;gap:8px;align-items:center">
+<div class="glass" style="padding:8px 14px;border-radius:100px;font-size:11px;font-weight:700">👑 <span id="countTop">5</span> ELITE</div>
+<div style="width:36px;height:36px;border-radius:100px;background:linear-gradient(135deg,#FFD700,#FF8C00);display:flex;align-items:center;justify-content:center;color:#000;font-weight:900">K</div>
+</div>
+</div>
+
+<div class="hero">
+<div style="text-align:center;max-width:700px;position:relative;z-index:2">
+<div class="badge">✨ TICKET Rs.100 • DAILY 3 WINNERS • LIVE 7PM</div>
+<h1 class="syne" style="font-size:72px;font-weight:800;line-height:0.85;margin-top:20px;letter-spacing:-3px">LEO<br><span class="gold-text">ROYAL</span><br>CLUB</h1>
+<p style="opacity:0.6;margin-top:16px;font-size:13px;line-height:1.6;font-weight:300">Sri Lanka's Most Premium Gold Ticket Community.<br>Where <span style="color:#FFD700;font-weight:700">Legends are Born</span> Daily.</p>
+<div style="margin-top:28px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+<button class="premium-btn">👑 VIEW ELITE MEMBERS</button>
+<button class="glass" style="padding:10px 18px;border-radius:100px;color:#fff;font-weight:700;font-size:13px;cursor:pointer">🎟️ BUY TICKET - Rs.100</button>
+</div>
+<div style="margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+<div class="glass" style="padding:10px 18px;border-radius:100px;display:flex;gap:8px;align-items:center"><span style="width:8px;height:8px;background:#00FF88;border-radius:50%;box-shadow:0 0 10px #00FF88"></span><span style="font-size:12px;font-weight:700"><b id="liveCount">5</b> Members Online</span></div>
+<div class="glass" style="padding:10px 18px;border-radius:100px;font-size:12px">💰 <b>Rs.100</b> Entry • Rs.1800 Daily Prize</div>
+<div class="glass" style="padding:10px 18px;border-radius:100px;font-size:12px">🔥 <b>Live Draw</b> 7PM Daily</div>
+</div>
+</div>
+</div>
+
+<div style="max-width:1280px;margin:0 auto;padding:30px 16px 60px">
+<div style="text-align:center;margin-bottom:26px"><div style="font-size:12px;letter-spacing:4px;opacity:0.4;font-weight:700">ELITE CIRCLE</div><div class="syne" style="font-size:42px;font-weight:800;letter-spacing:-1px">ROYAL <span class="gold-text">MEMBERS</span></div><div style="width:60px;height:3px;background:linear-gradient(90deg,#FFD700,#FF8C00);margin:10px auto;border-radius:100px"></div></div>
+
+<div style="max-width:720px;margin:0 auto 28px;display:flex;gap:10px">
+<div style="flex:1;position:relative"><span style="position:absolute;left:16px;top:50%;transform:translateY(-50%);opacity:0.5">🔍</span><input id="search" class="input" style="padding-left:40px" placeholder="Search elite members..." onkeyup="filterM()"></div>
+<select id="filter" class="input" style="max-width:140px" onchange="filterM()"><option value="all">All Royals</option><option value="diamond">💎 Diamond</option><option value="gold">👑 Gold</option></select>
+</div>
+
+<div id="grid" style="display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))"></div>
+</div>
+
+<div style="text-align:center;padding:24px;border-top:1px solid rgba(255,215,0,0.08);font-size:10px;opacity:0.3;letter-spacing:1px">© 2026 KAVIYA GOLD • LEO ROYAL CLUB • DESIGNED FOR LEGENDS • TICKET Rs.100</div>
+
+<script>
+let members=[
+{name:"Kaweed",ticket:"LEO-001",btn:"👑 ALPHA KING",level:"diamond",avatar:"🦁",color:"#FFD700",yt:"https://youtube.com/@kaweed",ytName:"Kaweed",fb:"https://facebook.com/kaweed",fbName:"Kaweed Official",insta:"https://instagram.com/kaweed",instaName:"@kaweed",tiktok:"https://tiktok.com/@kaweed",tikName:"@kaweed",joined:"2026-09-19",wins:12},
+{name:"Binuditha",ticket:"LEO-002",btn:"🔥 ROYAL QUEEN",level:"diamond",avatar:"👑",color:"#FF1493",yt:"https://youtube.com/@binuditha",ytName:"Binuditha",fb:"https://facebook.com/binuditha",fbName:"Binuditha Gold",insta:"https://instagram.com/binuditha",instaName:"@binuditha",tiktok:"https://tiktok.com/@binuditha",tikName:"@binuditha",joined:"2026-09-19",wins:8},
+{name:"Vidath Nethmika",ticket:"LEO-003",btn:"✨ ELITE VIP",level:"gold",avatar:"💎",color:"#00D9FF",yt:"https://youtube.com/@vidath",ytName:"Vidath",fb:"https://facebook.com/vidath.nethmika",fbName:"Vidath Nethmika",insta:"https://instagram.com/vidath.nethmika",instaName:"@vidath",tiktok:"https://tiktok.com/@vidathnethmika",tikName:"@vidath",joined:"2026-09-19",wins:5},
+{name:"Daham Meth",ticket:"LEO-004",btn:"⚡ POWER LEGEND",level:"gold",avatar:"🔥",color:"#FF8C00",yt:"https://youtube.com/@dahammeth",ytName:"Daham Meth",fb:"https://facebook.com/daham.meth",fbName:"Daham Meth",insta:"https://instagram.com/daham.meth",instaName:"@daham.meth",tiktok:"https://tiktok.com/@dahammeth",tikName:"@dahammeth",joined:"2026-09-19",wins:3},
+{name:"Videw Dinthary",ticket:"LEO-005",btn:"💫 STAR ROYAL",level:"gold",avatar:"⭐",color:"#7C3AED",yt:"https://youtube.com/@videwdinthary",ytName:"Videw Dinthary",fb:"https://facebook.com/videw.dinthary",fbName:"Videw Dinthary",insta:"https://instagram.com/videw.dinthary",instaName:"@videw",tiktok:"https://tiktok.com/@videwdinthary",tikName:"@videw",joined:"2026-09-19",wins:2}
+];
+function render(list=members){
+let g=document.getElementById('grid');g.innerHTML="";
+list.forEach(m=>{
+let isDiamond=m.level==='diamond';
+g.innerHTML+=`<div class="member-card glass" style="padding:20px;border:${isDiamond?'2px solid #00D9FF':'1px solid rgba(255,215,0,0.2)'};background:${isDiamond?'linear-gradient(135deg,rgba(0,217,255,0.12),rgba(124,58,237,0.08),rgba(0,0,0,0.2))':'linear-gradient(135deg,rgba(255,215,0,0.08),rgba(0,0,0,0.2))'}">
+<div style="position:absolute;top:14px;right:14px;display:flex;gap:6px"><span style="background:${m.color};color:#000;padding:4px 10px;border-radius:100px;font-size:9px;font-weight:900;letter-spacing:0.5px">${m.btn}</span><span style="background:rgba(255,255,255,0.1);padding:4px 8px;border-radius:100px;font-size:8px;font-weight:700">#${m.ticket}</span></div>
+<div style="display:flex;gap:16px;align-items:center;margin-top:10px">
+<div style="width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,${m.color},${m.color}88);display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 8px 20px ${m.color}44;border:2px solid ${m.color}">${m.avatar}</div>
+<div><div style="font-weight:800;font-size:16px;letter-spacing:-0.3px">${m.name}</div><div style="display:flex;gap:8px;margin-top:4px;align-items:center"><span style="font-size:10px;opacity:0.5">🏆 ${m.wins} Wins • Joined ${m.joined}</span><span style="width:6px;height:6px;background:#00FF88;border-radius:50%;display:inline-block;box-shadow:0 0 8px #00FF88"></span></div></div>
+</div>
+<div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:6px">
+<a href="${m.yt}" target="_blank" class="social-btn" style="background:rgba(255,0,0,0.15);border-color:rgba(255,0,0,0.3)">▶️ ${m.ytName}</a>
+<a href="${m.fb}" target="_blank" class="social-btn" style="background:rgba(24,119,242,0.15);border-color:rgba(24,119,242,0.3)">📘 ${m.fbName}</a>
+<a href="${m.insta}" target="_blank" class="social-btn" style="background:linear-gradient(135deg,rgba(240,148,51,0.15),rgba(220,39,67,0.15))">📸 ${m.instaName}</a>
+<a href="${m.tiktok}" target="_blank" class="social-btn" style="background:rgba(255,255,255,0.08)">🎵 ${m.tikName}</a>
+</div>
+<div style="display:flex;gap:8px;margin-top:16px">
+<button class="premium-btn" style="flex:1;padding:10px;font-size:12px">+ FOLLOW ELITE</button>
+<button class="glass" style="flex:1;padding:10px;border-radius:100px;color:#fff;font-weight:700;font-size:12px;cursor:pointer;border:1px solid rgba(255,255,255,0.15)">👁️ VIEW ROYAL PROFILE</button>
+</div>
+${isDiamond?'<div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#00D9FF,#7C3AED,#FFD700)"></div>':''}
+</div>`;
+});
+document.getElementById('countTop').innerText=list.length;
+document.getElementById('liveCount').innerText=list.length;
+}
+function filterM(){let q=document.getElementById('search').value.toLowerCase();let f=document.getElementById('filter').value;render(members.filter(m=>(m.name.toLowerCase().includes(q))&&(f==='all'||m.level===f)));}
+render();
+</script>
+</body></html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Exclusive</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body style="background:#0A1931;font-family:'Outfit',sans-serif;margin:0">
+
+<!-- LOCK SCREEN - For non-members -->
+<div id="lockScreen" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px">
+  <div style="background:rgba(255,255,255,0.05);border:2px solid #FFD700;border-radius:24px;padding:32px;max-width:380px;width:100%;text-align:center">
+    <div style="font-size:50px">🔒</div>
+    <h2 style="color:#FFD700;font-family:'Playfair Display';margin-top:10px">Gold Members Only</h2>
+    <p style="color:#8DA2C3;font-size:12px;margin-top:8px">This area is exclusive for membership buy karapu ayata witharai. Oya buy karala thiyenawanam code eka danna.</p>
+    
+    <input id="accessCode" placeholder="Enter Gold Access Code" style="width:100%;margin-top:18px;background:rgba(0,0,0,0.4);border:1.5px solid rgba(255,215,0,0.3);border-radius:12px;padding:14px;color:#fff;text-align:center;letter-spacing:2px;font-weight:800">
+    
+    <button onclick="unlockGold()" style="width:100%;margin-top:12px;background:linear-gradient(90deg,#FFD700,#FFC400);color:#000;padding:14px;border-radius:100px;border:none;font-weight:900;cursor:pointer">🔓 Unlock Gold Area</button>
+    
+    <div style="margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1)">
+      <p style="color:#6B7280;font-size:11px">Don't have access?</p>
+      <a href="membership.html" style="color:#FFD700;font-size:12px;font-weight:700">Buy Gold Membership - LKR 2500</a>
+      <br><br>
+      <a href="https://whatsapp.com/channel/0029Vb8bIYv17EmtzlqEVC3B" target="_blank" style="color:#25D366;font-size:11px">💚 Follow Channel for Updates</a>
+    </div>
+    <p id="err" style="color:#EF4444;font-size:11px;margin-top:10px;display:none">❌ Wrong code! Contact President.</p>
+  </div>
+</div>
+
+<!-- PRIVATE GOLD AREA - Only for buyers -->
+<div id="goldArea" style="display:none">
+  <nav style="display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:#0A1F44;border-bottom:2px solid #FFD700">
+    <div style="color:#FFD700;font-weight:900">💎 GOLD EXCLUSIVE</div>
+    <button onclick="location.href='index.html'" style="border:1px solid #C9A86A;color:#E6C875;padding:8px 16px;border-radius:100px;background:rgba(255,255,255,0.06);font-size:12px">← Back to Home</button>
+  </nav>
+
+  <div style="text-align:center;padding:30px;background:radial-gradient(600px at 50% 0%, rgba(255,215,0,0.2), transparent)">
+    <div style="display:inline-block;background:#FFD700;color:#000;padding:6px 16px;border-radius:100px;font-size:10px;font-weight:900">🔓 UNLOCKED - GOLD MEMBER</div>
+    <h1 style="color:#FFD700;font-family:'Playfair Display';font-size:36px;margin-top:12px">Welcome Gold Leo! 👑</h1>
+    <p style="color:#8DA2C3;font-size:12px">Exclusive content for you only</p>
+  </div>
+
+  <div style="max-width:900px;margin:0 auto;padding:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+    <div style="background:rgba(255,215,0,0.08);border:1px solid #FFD700;border-radius:16px;padding:18px">
+      <h4 style="color:#FFD700">🎥 Exclusive Training</h4><p style="color:#C5D1E8;font-size:11px;margin-top:6px">Leadership videos only for gold members</p>
+      <button style="margin-top:10px;background:#FFD700;color:#000;padding:8px 14px;border-radius:20px;border:none;font-weight:800;font-size:11px">Watch Now</button>
+    </div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,106,0.2);border-radius:16px;padding:18px">
+      <h4 style="color:#fff">💬 Gold WhatsApp Group</h4><p style="color:#8DA2C3;font-size:11px;margin-top:6px">Join private gold members group</p>
+      <a href="https://whatsapp.com/channel/0029Vb8bIYv17EmtzlqEVC3B" target="_blank" style="display:inline-block;margin-top:10px;background:#25D366;color:#fff;padding:8px 14px;border-radius:20px;text-decoration:none;font-weight:800;font-size:11px">Join Private Group →</a>
+    </div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,106,0.2);border-radius:16px;padding:18px">
+      <h4 style="color:#fff">📜 Your Gold Certificate</h4><p style="color:#8DA2C3;font-size:11px;margin-top:6px">Download your official certificate</p>
+      <button style="margin-top:10px;background:transparent;border:1.5px solid #FFD700;color:#FFD700;padding:8px 14px;border-radius:20px;font-weight:800;font-size:11px">Download PDF</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// SET YOUR GOLD ACCESS CODES - Change these!
+const goldCodes = ["GOLD2024", "LEO123", "VIP500", "PRESIDENT"]; // oyata ona codes danna
+
+function unlockGold(){
+  const code = document.getElementById('accessCode').value.trim().toUpperCase();
+  if(goldCodes.includes(code) || code.startsWith("GOLD-")){
+    localStorage.setItem('isGoldMember','true');
+    document.getElementById('lockScreen').style.display='none';
+    document.getElementById('goldArea').style.display='block';
+  } else {
+    document.getElementById('err').style.display='block';
+  }
+}
+// Auto unlock if already entered
+if(localStorage.getItem('isGoldMember')==='true'){
+  document.getElementById('lockScreen').style.display='none';
+  document.getElementById('goldArea').style.display='block';
+}
+</script>
+</body>
+</html>

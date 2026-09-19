@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - LEO CLUB</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0A1931;color:#fff;font-family:'Outfit',sans-serif}
+nav{display:flex;justify-content:space-between;align-items:center;padding:12px 40px;background:#0A1F44;border-bottom:1.5px solid #C9A86A;position:sticky;top:0;z-index:99}
+.nav-left{display:flex;align-items:center;gap:12px}
+.nav-left img{width:68px;height:68px; border-radius: 50%; object-fit:contain}
+.nav-left span{font-family:'Playfair Display';color:#C9A86A;letter-spacing:2px;font-weight:700;font-size:14px}.logo-box{display:flex;align-items:center;gap:12px}
+.logo-round{width:54px;height:54px;border-radius:50%;object-fit:cover;border:2px solid #FFD700;background:#fff}
+.back-btn{background:rgba(255,255,255,0.08);border:1px solid rgba(201,168,106,0.4);color:#E6C875;padding:10px 18px;border-radius:100px;font-weight:700;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:0.2s}
+.back-btn:hover{background:#FFD700;color:#0A1F44;transform:translateX(-3px)}
+.tab-btn{background:none;border:none;color:rgba(255,255,255,0.6);font-weight:600;font-size:13px;cursor:pointer;padding:8px 12px;border-radius:20px}
+.tab-btn.active{color:#0A1931;background:#FFD700;font-weight:800}
+</style>
+</head>
+<body>
+
+<!-- NAV WITH BACK TO HOME -->
+<nav>
+    <div class="nav-left">
+  
+    <img src="nav_img.png" alt="LEO CLUB LOGO">
+    <div style="color:#C9A86A;font-weight:900;letter-spacing:2px;font-family:'Playfair Display'">LEO CLUB</div>
+</div>
+  
+  <div style="display:flex;align-items:center;gap:12px">
+    <!-- MEKA THAMAI BACK TO HOME BUTTON EKA -->
+    <button class="back-btn" onclick="goHome()">
+      ← Back to Home
+    </button>
+    <button class="tab-btn" onclick="goHome()">Home</button>
+    <button class="tab-btn active">About</button>
+  </div>
+</nav>
+
+<!-- ABOUT CONTENT - ENGLISH PREMIUM -->
+<div style="text-align:center;padding:50px 30px 30px;background:radial-gradient(700px at 50% 0%, rgba(201,168,106,0.18), transparent), linear-gradient(180deg,#0D244A,#0A1F44)">
+  <div style="display:inline-block;background:linear-gradient(90deg,#E6C875,#C9A86A);color:#0A1F44;padding:6px 18px;border-radius:100px;font-size:10px;font-weight:900;letter-spacing:3px">ABOUT US</div>
+  <h1 style="font-family:'Playfair Display';font-size:44px;color:#E6C875;margin-top:14px">About Leo Club</h1>
+  <p style="color:#8DA2C3;font-size:12px;margin-top:6px">Lead • Experience • Opportunity • Since 1957</p>
+</div>
+
+<div style="max-width:900px;margin:0 auto;padding:30px">
+  
+  <div style="background:rgba(255,255,255,0.04);border:1.5px solid rgba(201,168,106,0.3);border-radius:20px;padding:30px;display:flex;gap:24px;flex-wrap:wrap;align-items:center">
+    <div style="flex:1;min-width:260px">
+      <h3 style="color:#E6C875;font-size:22px">🦁 Who We Are</h3>
+      <p style="color:#C5D1E8;font-size:13px;line-height:1.8;margin-top:10px">
+        <b style="color:#fff">LEO CLUB</b> is a global Children organization in 150+ countries. 
+        We empower Child through <b style="color:#FFD700">Leadership, Experience, Opportunity</b>.
+      </p>
+      <button onclick="goHome()" style="margin-top:16px;background:linear-gradient(90deg,#FFD700,#FFC400);color:#0A1931;padding:10px 20px;border-radius:100px;border:none;font-weight:800;cursor:pointer">← Back to Homepage</button>
+    </div>
+    <div><img  style="width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#C9A86A);display:flex;align-items:center;justify-content:center;font-size:70px;border:3px solid #FFD700" src="hero_logo.png"> </div>
+  </div>
+
+  <!-- 3 Cards -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px">
+    <div style="background:rgba(255,215,0,0.07);border:1px solid rgba(255,215,0,0.3);border-radius:16px;padding:20px;text-align:center"><div style="font-size:28px">👑</div><h4 style="color:#FFD700;margin-top:8px">Leadership</h4><p style="color:#8DA2C3;font-size:11px;margin-top:6px">Develop leadership skills</p></div>
+    <div style="background:rgba(192,192,192,0.07);border:1px solid rgba(192,192,192,0.3);border-radius:16px;padding:20px;text-align:center"><div style="font-size:28px">💡</div><h4 style="color:#C0C0C0;margin-top:8px">Experience</h4><p style="color:#8DA2C3;font-size:11px;margin-top:6px">Hands-on community service</p></div>
+    <div style="background:rgba(205,127,50,0.07);border:1px solid rgba(205,127,50,0.3);border-radius:16px;padding:20px;text-align:center"><div style="font-size:28px">🚀</div><h4 style="color:#CD7F32;margin-top:8px">Opportunity</h4><p style="color:#8DA2C3;font-size:11px;margin-top:6px">Global network & growth</p></div>
+  </div>
+
+  <div style="text-align:center;margin-top:30px">
+    <button onclick="goHome()" style="background:transparent;border:1.5px solid #FFD700;color:#FFD700;padding:12px 30px;border-radius:100px;font-weight:800;cursor:pointer">🏠 Back to Home Page</button>
+  </div>
+
+</div>
+
+<script>
+// BACK TO HOME FUNCTION - 3 VIDHIYA
+function goHome(){
+  // 1. Agar main index.html eke tab ekak nam
+  if(window.opener){
+    window.close();
+  } 
+  // 2. Same page eke home tab ekak thiyanawa nam
+  else if(document.getElementById('home')){
+    document.querySelectorAll('.tab').forEach(t=>t.style.display='none');
+    document.getElementById('home').style.display='block';
+    window.scrollTo(0,0);
+  } 
+  // 3. Wena page ekak nam index.html ekata yanna
+  else {
+    window.location.href = "index.html";
+    // Nathnam meka danna: window.history.back();
+  }
+}
+</script>
+
+</body>
+</html>

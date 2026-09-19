@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0B1F45;color:#fff;font-family:'Outfit',sans-serif;overflow-x:hidden}
+nav{display:flex;justify-content:space-between;align-items:center;padding:12px 40px;background:#0A1F44;border-bottom:1.5px solid #C9A86A;position:sticky;top:0;z-index:99}
+.nav-left{display:flex;align-items:center;gap:12px}
+.nav-left img{width:68px;height:68px; border-radius: 50%; object-fit:contain}
+.nav-left span{font-family:'Playfair Display';color:#C9A86A;letter-spacing:2px;font-weight:700;font-size:14px}
+.menu{display:flex;gap:28px;align-items:center}
+.menu button{background:none;border:none;color:#fff;font-size:14px;font-weight:500;cursor:pointer;padding-bottom:4px;border-bottom:2px solid transparent;transition:0.2s}
+.menu button.active{color:#E6C875;border-color:#E6C875}
+.right{display:flex;align-items:center;gap:16px}
+.user{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center}
+.join{background:linear-gradient(180deg,#E6C875,#C9A86A);color:#0A1F44;padding:10px 22px;border-radius:8px;border:none;font-weight:800;cursor:pointer;box-shadow:0 4px 15px rgba(201,168,106,0.4)}
+.hero{display:flex;justify-content:space-between;align-items:center;padding:50px 60px;background:radial-gradient(800px at 70% 40%, rgba(201,168,106,0.18), transparent), linear-gradient(180deg,#0D244A,#0A1F44);position:relative;overflow:hidden}
+.hero-left{max-width:560px}
+.hero-left h1{font-family:'Playfair Display';font-size:64px;color:#E6C875;line-height:0.9;letter-spacing:1px}
+.hero-left h2{color:#E6C875;font-size:18px;letter-spacing:1px;margin-top:8px;font-weight:600}
+.hero-left h3{font-size:30px;margin-top:12px;line-height:1.1}
+.hero-left p{color:#A8B5CC;font-size:13px;line-height:1.6;margin-top:12px}
+.hero-btns{display:flex;gap:14px;margin-top:22px}
+.btn-gold{background:linear-gradient(180deg,#E6C875,#C9A86A);color:#0A1F44;padding:12px 22px;border-radius:8px;border:none;font-weight:800;cursor:pointer}
+.btn-outline{border:1px solid #C9A86A;color:#E6C875;background:transparent;padding:12px 22px;border-radius:8px;font-weight:600;cursor:pointer}
+.hero-right img{width:420px;height:420px;  border-radius: 50%; object-fit:contain;filter:drop-shadow(0 0 30px rgba(201,168,106,0.6)) }
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:22px 60px;background:#2A4A7A}
+.stat{border:1px solid #C9A86A;padding:16px;border-radius:6px;display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.03)}
+.stat h4{color:#E6C875;font-size:20px}
+.stat p{color:#fff;font-size:11px;opacity:0.7}
+.why{padding:24px 60px;background:#8AA0C2}
+.why h2{text-align:center;color:#0A1F44;font-size:20px;margin-bottom:16px}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#E8EEF7;border-radius:8px;padding:18px;display:flex;gap:12px}
+.card h4{color:#0A1F44;font-size:15px}
+.card p{color:#4A5A73;font-size:11px;margin-top:4px;line-height:1.4}
+.footer{background:#0A1F44;text-align:center;padding:14px;border-top:1px solid #C9A86A;color:#C9A86A;font-size:11px;letter-spacing:1px}
+.tab{display:none}
+.tab.active{display:block}
+.special-tab-btn{background:linear-gradient(90deg,#FFD700,#FFC400)!important;color:#0A1F44!important;padding:10px 18px!important;border-radius:100px!important;font-weight:900!important;box-shadow:0 5px 20px rgba(255,215,0,0.4)!important}
+.special-box{max-width:480px;margin:40px auto;background:rgba(255,255,255,0.05);border:1.5px solid #FFD700;border-radius:20px;padding:30px;text-align:center}
+.special-box input{width:100%;padding:16px;border-radius:12px;background:rgba(0,0,0,0.4);border:1.5px solid rgba(255,215,0,0.3);color:#FFD700;font-size:26px;letter-spacing:8px;text-align:center;margin-top:12px;outline:none}
+</style>
+</style>
+</head>
+<body>
+
+<!-- ADMIN LOGIN SCREEN -->
+<div id="loginScreen" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px">
+  <div style="background:rgba(255,255,255,0.05);border:2px solid #FFD700;border-radius:24px;padding:32px;max-width:380px;width:100%;text-align:center">
+    <div style="font-size:50px">🔐</div>
+    <h2 style="color:#FFD700;margin-top:10px">Admin Only</h2>
+    <p style="color:#8DA2C3;font-size:12px;margin-top:6px"></p>
+
+    <input id="adminUser" placeholder="Admin Username" style="width:100%;margin-top:18px;background:rgba(0,0,0,0.4);border:1px solid rgba(201,168,106,0.2);border-radius:12px;padding:14px;color:#fff">
+    <input id="adminPass" type="password" placeholder="Admin Password" style="width:100%;margin-top:10px;background:rgba(0,0,0,0.4);border:1px solid rgba(201,168,106,0.2);border-radius:12px;padding:14px;color:#fff">
+
+    <button onclick="adminLogin()" style="width:100%;margin-top:14px;background:linear-gradient(90deg,#FFD700,#FFC400);color:#000;padding:14px;border-radius:100px;border:none;font-weight:900;cursor:pointer">Login as Admin →</button>
+    <p id="loginErr" style="color:#EF4444;font-size:11px;margin-top:10px;display:none">❌ Wrong username or password!</p>
+
+    <button onclick="location.href='index.html'" style="margin-top:16px;background:transparent;border:none;color:#6B7280;font-size:11px;cursor:pointer">← Back to Home</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL - ONLY AFTER LOGIN -->
+<div id="adminPanel" style="display:none">
+  <nav style="display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:#0A1F44;border-bottom:2px solid #FFD700">
+    <div style="color:#FFD700;font-weight:900">👑 ADMIN PANEL </div>
+    <div style="display:flex;gap:10px">
+      <span style="background:#22C55E;color:#fff;padding:6px 12px;border-radius:100px;font-size:10px;font-weight:800">● ADMIN LOGGED IN</span>
+      <button onclick="adminLogout()" style="border:1px solid #EF4444;color:#EF4444;padding:6px 14px;border-radius:100px;background:transparent;font-size:11px;cursor:pointer">Logout</button>
+    </div>
+  </nav>
+
+ </div>
+<br><br><br>
+<div class="menu">
+    <button class="active" onclick="openTab('home',this)">Home</button>
+     <a href="Certificate.html" ><button >CREATE CERTIFICATE</button></a>
+     <a href="Idcard.html" ><button>CREATE ID CARD</button></a></div>
+     
+</body>
+
+<script>
+// *** ADMIN LOGIN - CHANGE THIS! ***
+const ADMIN_USER = "leoadmin";
+const ADMIN_PASS = "leo2026"; // <-- meka maru karanna !
+
+
+
+
+function adminLogin(){
+  const u = document.getElementById('adminUser').value;
+  const p = document.getElementById('adminPass').value;
+  if(u===ADMIN_USER && p===ADMIN_PASS){
+    localStorage.setItem('leoAdmin','true');
+    showPanel();
+  } else {
+    document.getElementById('loginErr').style.display='block';
+  }
+}
+function adminLogout(){
+  localStorage.removeItem('leoAdmin');
+  location.reload();
+}
+function showPanel(){
+  document.getElementById('loginScreen').style.display='none';
+  document.getElementById('adminPanel').style.display='block';
+  renderAdminBoard();
+}
+if(localStorage.getItem('leoAdmin')==='true') showPanel();
+
+
+</script>
+</body>
+</html>

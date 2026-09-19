@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leaderboard - Leo Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body style="background:#0A1931;color:#fff;font-family:'Outfit',sans-serif;margin:0">
+
+<nav style="display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:#0A1F44;border-bottom:2px solid #C9A86A;position:sticky;top:0">
+  <div style="display:flex;align-items:center;gap:10px">
+    <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#C9A86A);display:flex;align-items:center;justify-content:center">🦁</div>
+    <div style="color:#C9A86A;font-weight:900">LEO CLUB</div>
+  </div>
+  <button onclick="location.href='index.html'" style="border:1px solid #C9A86A;color:#E6C875;padding:8px 16px;border-radius:100px;background:rgba(255,255,255,0.06);font-size:12px">← Back to Home</button>
+</nav>
+
+<div style="text-align:center;padding:40px 20px;background:radial-gradient(600px at 50% 0%, rgba(255,215,0,0.18), transparent)">
+  <div style="display:inline-block;background:linear-gradient(90deg,#FFD700,#FFA500);color:#000;padding:6px 16px;border-radius:100px;font-size:10px;font-weight:900;letter-spacing:2px">LIVE RANKING</div>
+  <h1 style="font-family:'Playfair Display';font-size:38px;color:#E6C875;margin-top:12px">🏆 Points Leaderboard</h1>
+  <p style="color:#8DA2C3;font-size:12px;margin-top:6px">Top contributors - Updated by Admin</p>
+  <div style="margin-top:14px;color:#6B7280;font-size:10px">🔒 Only Admin can give points • Everyone can view</div>
+</div>
+
+<div style="max-width:700px;margin:0 auto;padding:20px">
+
+  <!-- TOP 3 PODIUM -->
+  <div id="podium" style="display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:12px;align-items:end;margin-bottom:24px"></div>
+
+  <!-- FULL LIST -->
+  <div id="publicBoard"></div>
+
+  <!-- WHATSAPP CHANNEL CTA -->
+  <div style="margin-top:28px;background:rgba(37,211,102,0.08);border:1.5px solid #25D366;border-radius:16px;padding:18px;text-align:center">
+    <h4 style="color:#fff;font-size:13px">Want to be on top? Join events!</h4>
+    <p style="color:#8DA2C3;font-size:11px;margin-top:4px">Follow our channel for upcoming events & point opportunities</p>
+    <a href="https://whatsapp.com/channel/0029Vb8bIYv17EmtzlqEVC3B" target="_blank" style="display:inline-block;margin-top:12px;background:#25D366;color:#fff;padding:10px 22px;border-radius:100px;text-decoration:none;font-weight:800;font-size:12px">💚 Follow WhatsApp Channel</a>
+  </div>
+
+</div>
+
+<script>
+// READ FROM SAME STORAGE THAT ADMIN SAVES
+let pointsData = JSON.parse(localStorage.getItem('leoPoints')||'[]');
+
+function renderPublic(){
+  const board = document.getElementById('publicBoard');
+  const podium = document.getElementById('podium');
+
+  if(pointsData.length===0){
+    board.innerHTML = `
+      <div style="text-align:center;padding:40px;background:rgba(255,255,255,0.04);border-radius:16px;border:1px dashed rgba(201,168,106,0.3)">
+        <div style="font-size:40px">🏆</div>
+        <p style="color:#8DA2C3;font-size:12px;margin-top:8px">No points yet - Admin will add after events!</p>
+        <p style="color:#6B7280;font-size:10px;margin-top:4px">Stay tuned for events</p>
+      </div>`;
+    return;
+  }
+
+  // Calculate totals
+  const totals = {};
+  const lastEvent = {};
+  pointsData.forEach(p=>{
+    totals[p.name] = (totals[p.name]||0)+p.pts;
+    lastEvent[p.name] = p.event;
+  });
+  const sorted = Object.entries(totals).sort((a,b)=>b[1]-a[1]);
+
+  // PODIUM for top 3
+  if(sorted.length>=1){
+    const top3 = sorted.slice(0,3);
+    // Reorder for podium visual: 2nd, 1st, 3rd
+    const order = top3.length===3? [top3[1], top3[0], top3[2]] : top3;
+    podium.innerHTML = order.map(([name,pts], idx)=>{
+      const isFirst = (sorted[0][0]===name);
+      const medal = isFirst?'🥇': sorted[1] && sorted[1][0]===name? '🥈' : '🥉';
+      const h = isFirst?'110px':'80px';
+      const bg = isFirst?'linear-gradient(180deg,rgba(255,215,0,0.25),rgba(255,215,0,0.05))':'rgba(255,255,255,0.04)';
+      const border = isFirst?'2px solid #FFD700':'1px solid rgba(201,168,106,0.2)';
+      return `
+      <div style="background:${bg};border:${border};border-radius:16px;padding:14px;text-align:center">
+        <div style="font-size:28px">${medal}</div>
+        <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#FFA500);margin:8px auto;display:flex;align-items:center;justify-content:center;font-size:20px">👑</div>
+        <div style="color:${isFirst?'#FFD700':'#fff'};font-weight:800;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${name}</div>
+        <div style="color:#FFD700;font-weight:900;font-size:16px;margin-top:4px">${pts}</div>
+        <div style="color:#8DA2C3;font-size:8px">POINTS</div>
+        <div style="height:${h};margin-top:8px;background:rgba(0,0,0,0.2);border-radius:8px 8px 0 0"></div>
+      </div>`;
+    }).join('');
+  }
+
+  // Full list
+  board.innerHTML = sorted.map(([name,total],i)=>{
+    const medal = i===0?'🥇':i===1?'🥈':i===2?'🥉':`#${i+1}`;
+    const color = i===0?'#FFD700':i===1?'#C0C0C0':i===2?'#CD7F32':'#C5D1E8';
+    const bg = i<3?'linear-gradient(90deg,rgba(255,215,0,0.1),rgba(255,215,0,0.02))':'rgba(255,255,255,0.04)';
+    const border = i<3?'1px solid rgba(255,215,0,0.3)':'1px solid rgba(201,168,106,0.12)';
+    return `
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:${bg};border:${border};border-radius:12px;margin-top:8px">
+      <div style="display:flex;gap:12px;align-items:center">
+        <span style="width:30px;text-align:center;font-weight:900;color:${color}">${medal}</span>
+        <div>
+          <div style="color:#fff;font-weight:700;font-size:13px">${name}</div>
+          <div style="color:#8DA2C3;font-size:10px">Last: ${lastEvent[name]} • Total events: ${pointsData.filter(p=>p.name===name).length}</div>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div style="color:${color};font-weight:900;font-size:18px">${total}</div>
+        <div style="color:#6B7280;font-size:8px">POINTS</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+renderPublic();
+// Auto refresh every 5 sec - if admin adds, public sees live!
+setInterval(()=>{
+  pointsData = JSON.parse(localStorage.getItem('leoPoints')||'[]');
+  renderPublic();
+},5000);
+</script>
+</body>
+</html>

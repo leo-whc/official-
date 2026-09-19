@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership - LEO CLUB</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0A1931;color:#fff;font-family:'Outfit',sans-serif}
+nav{display:flex;justify-content:space-between;align-items:center;padding:12px 40px;background:#0A1F44;border-bottom:1.5px solid #C9A86A;position:sticky;top:0;z-index:99}
+.nav-left{display:flex;align-items:center;gap:12px}
+.nav-left img{width:68px;height:68px; border-radius: 50%; object-fit:contain}
+.nav-left span{font-family:'Playfair Display';color:#C9A86A;letter-spacing:2px;font-weight:700;font-size:14px}.back{border:1px solid #C9A86A;color:#E6C875;padding:9px 18px;border-radius:100px;background:rgba(255,255,255,0.06);font-weight:700;font-size:12px;cursor:pointer}
+.back:hover{background:#FFD700;color:#0A1931}
+.card{border-radius:20px;padding:26px;position:relative;overflow:hidden;transition:0.3s}
+.card:hover{transform:translateY(-6px) scale(1.02)}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+  
+    <img src="nav_img.png" alt="LEO CLUB LOGO">
+    <div style="color:#C9A86A;font-weight:900;letter-spacing:2px;font-family:'Playfair Display'">LEO CLUB</div>
+</div>
+  <div style="display:flex;gap:10px">
+    <button class="back" onclick="goHome()">← Back to Home</button>
+    <button style="background:#FFD700;color:#0A1931;padding:9px 18px;border-radius:100px;border:none;font-weight:900;font-size:12px">Membership</button>
+  </div>
+</nav>
+
+<div style="text-align:center;padding:50px 20px 30px;background:radial-gradient(800px at 50% 0%, rgba(201,168,106,0.2), transparent), linear-gradient(180deg,#0D244A,#0A1F44)">
+  <div style="display:inline-block;background:linear-gradient(90deg,#E6C875,#C9A86A);color:#0A1F44;padding:6px 18px;border-radius:100px;font-size:10px;font-weight:900;letter-spacing:3px">JOIN THE PRIDE</div>
+  <h1 style="font-family:'Playfair Display';font-size:44px;color:#E6C875;margin-top:14px">Become a Leo</h1>
+  <p style="color:#8DA2C3;font-size:13px;margin-top:8px;max-width:500px;margin-left:auto;margin-right:auto">Join 500+ young leaders making a difference. Leadership, friendship, and service - all in one family!</p>
+</div>
+
+<div style="max-width:1050px;margin:0 auto;padding:30px">
+
+  <!-- BENEFITS -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:30px">
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,106,0.2);border-radius:14px;padding:16px;text-align:center"><div style="font-size:28px">👑</div><div style="color:#FFD700;font-weight:800;margin-top:6px;font-size:13px">Leadership Training</div><div style="color:#8DA2C3;font-size:11px;margin-top:4px">Public speaking, management</div></div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,106,0.2);border-radius:14px;padding:16px;text-align:center"><div style="font-size:28px">🌍</div><div style="color:#FFD700;font-weight:800;margin-top:6px;font-size:13px">Global Network</div><div style="color:#8DA2C3;font-size:11px;margin-top:4px">25+ countries connection</div></div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,106,0.2);border-radius:14px;padding:16px;text-align:center"><div style="font-size:28px">🎓</div><div style="color:#FFD700;font-weight:800;margin-top:6px;font-size:13px">Certificates</div><div style="color:#8DA2C3;font-size:11px;margin-top:4px">Recognized awards</div></div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,106,0.2);border-radius:14px;padding:16px;text-align:center"><div style="font-size:28px">❤️</div><div style="color:#FFD700;font-weight:800;margin-top:6px;font-size:13px">Serve Community</div><div style="color:#8DA2C3;font-size:11px;margin-top:4px">Make real impact</div></div>
+  </div>
+
+  <!-- MEMBERSHIP PLANS - 1,2,3 PLACE STYLE -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;align-items:end">
+
+    <!-- BRONZE - 3RD PLACE -->
+    <div class="card" style="background:linear-gradient(180deg,rgba(205,127,50,0.12),rgba(205,127,50,0.03));border:1.5px solid rgba(205,127,50,0.4)">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#CD7F32,#A65C1A);display:flex;align-items:center;justify-content:center;font-size:24px">🥉</div>
+        <span style="background:rgba(205,127,50,0.2);color:#CD7F32;padding:4px 10px;border-radius:100px;font-size:10px;font-weight:800">3RD PLACE - BASIC</span>
+      </div>
+      <h3 style="color:#CD7F32;margin-top:16px;font-size:20px">Bronze Leo</h3>
+      <div style="color:#fff;font-size:28px;font-weight:900;margin-top:4px">FREE<span style="font-size:12px;font-weight:400;color:#8DA2C3">/year</span></div>
+      <ul style="list-style:none;margin-top:16px">
+        <li style="color:#C5D1E8;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#CD7F32">✓</span> Join community events</li>
+        <li style="color:#C5D1E8;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#CD7F32">✓</span> Monthly newsletter</li>
+        <li style="color:#C5D1E8;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#CD7F32">✓</span> Certificate of membership</li>
+        <li style="color:#6B7280;font-size:12px;line-height:2.2;display:flex;gap:8px"><span>✗</span> Leadership training</li>
+      </ul>
+       <a href="https://wa.me/94773053603?text=LEO CLUB - මට leo club Bronze leo කෙනෙක් විදියට free එන්න ඔනෙ" ><button style="width:100%;margin-top:18px;background:transparent;border:1.5px solid #CD7F32;color:#CD7F32;padding:12px;border-radius:100px;font-weight:800;cursor:pointer">Join Bronze</button></a>
+    </div>
+
+    <!-- GOLD - 1ST PLACE - POPULAR -->
+    <div class="card" style="background:linear-gradient(180deg,rgba(255,215,0,0.18),rgba(255,215,0,0.04));border:2px solid #FFD700;transform:scale(1.05);box-shadow:0 20px 50px rgba(255,215,0,0.25)">
+      <div style="position:absolute;top:12px;right:12px;background:#FFD700;color:#000;padding:4px 12px;border-radius:100px;font-size:9px;font-weight:900">★ MOST POPULAR</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+        <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#FFA500);display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 20px rgba(255,215,0,0.4)">🥇</div>
+        <span style="background:rgba(255,215,0,0.2);color:#FFD700;padding:4px 10px;border-radius:100px;font-size:10px;font-weight:800">1ST PLACE - PREMIUM</span>
+      </div>
+      <h3 style="color:#FFD700;margin-top:16px;font-size:22px">Gold Leo</h3>
+      <div style="color:#fff;font-size:32px;font-weight:900;margin-top:4px">LKR 2,500<span style="font-size:12px;font-weight:400;color:#8DA2C3">/year</span></div>
+      <ul style="list-style:none;margin-top:16px">
+        <li style="color:#fff;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#FFD700">✓</span> Everything in Bronze</li>
+        <li style="color:#fff;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#FFD700">✓</span> Leadership workshops</li>
+        <li style="color:#fff;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#FFD700">✓</span> International exchange chance</li>
+        <li style="color:#fff;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#FFD700">✓</span> Leo T-shirt + ID Card</li>
+        <li style="color:#fff;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#FFD700">✓</span> Priority event access</li>
+      </ul>
+       <a href="https://wa.me/94773053603?text=LEO CLUB - මට leo club Gold leo කෙනෙක් විදියට LKR 2,500 membership එක buy කරන්න් ඔනෙ" ><button style="width:100%;margin-top:18px;background:linear-gradient(90deg,#FFD700,#FFC400);color:#000;padding:13px;border-radius:100px;border:none;font-weight:900;cursor:pointer;box-shadow:0 8px 20px rgba(255,215,0,0.4)">Join Gold →</button></a>
+    </div>
+
+    <!-- SILVER - 2ND PLACE -->
+    <div class="card" style="background:linear-gradient(180deg,rgba(192,192,192,0.12),rgba(192,192,192,0.03));border:1.5px solid rgba(192,192,192,0.5)">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#C0C0C0,#A0A0A0);display:flex;align-items:center;justify-content:center;font-size:24px">🥈</div>
+        <span style="background:rgba(192,192,192,0.2);color:#C0C0C0;padding:4px 10px;border-radius:100px;font-size:10px;font-weight:800">2ND PLACE - STANDARD</span>
+      </div>
+      <h3 style="color:#C0C0C0;margin-top:16px;font-size:20px">Silver Leo</h3>
+      <div style="color:#fff;font-size:28px;font-weight:900;margin-top:4px">LKR 1,000<span style="font-size:12px;font-weight:400;color:#8DA2C3">/year</span></div>
+      <ul style="list-style:none;margin-top:16px">
+        <li style="color:#C5D1E8;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#C0C0C0">✓</span> Everything in Bronze</li>
+        <li style="color:#C5D1E8;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#C0C0C0">✓</span> Monthly training</li>
+        <li style="color:#C5D1E8;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#C0C0C0">✓</span> Club T-shirt</li>
+        <li style="color:#C5D1E8;font-size:12px;line-height:2.2;display:flex;gap:8px"><span style="color:#C0C0C0">✓</span> Event discounts</li>
+      </ul>
+      <a href="https://wa.me/94773053603?text=LEO CLUB - මට leo club Silver leo කෙනෙක් විදියට LKR 1,000 membership එක buy කරන්න් ඔනෙ" ><button style="width:100%;margin-top:18px;background:transparent;border:1.5px solid #C0C0C0;color:#C0C0C0;padding:12px;border-radius:100px;font-weight:800;cursor:pointer">Join Silver</button></a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <button onclick="goHome()" style="background:linear-gradient(90deg,#FFD700,#FFC400);color:#0A1931;padding:14px 36px;border-radius:100px;border:none;font-weight:900;cursor:pointer;box-shadow:0 8px 25px rgba(255,215,0,0.4)">🏠 Back to Home</button>
+    <a href="Contact .html" ><button style="background:transparent;border:1.5px solid rgba(201,168,106,0.4);color:#E6C875;padding:14px 36px;border-radius:100px;font-weight:700;cursor:pointer">💬 Contact Us</button></a>
+  </div><br><br>
+
+
+<script>function goHome(){window.location.href="index.html";}</script>
+</body>
+</html>

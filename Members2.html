@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leo Wall of Fame</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0A1931;color:#fff;font-family:'Outfit',sans-serif}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;background:#0A1F44;border-bottom:2px solid #C9A86A;position:sticky;top:0;z-index:99}
+.back{border:1px solid #C9A86A;color:#E6C875;padding:9px 18px;border-radius:100px;background:rgba(255,255,255,0.06);font-weight:700;font-size:12px;cursor:pointer}
+.badge-card{background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,215,0,0.03));border:1.5px solid #FFD700;border-radius:20px;padding:18px;text-align:center;position:relative;overflow:hidden;transition:0.3s}
+.badge-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 15px 40px rgba(255,215,0,0.25)}
+.point-row{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(255,255,255,0.04);border-radius:12px;border:1px solid rgba(201,168,106,0.15);margin-top:8px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#C9A86A);display:flex;align-items:center;justify-content:center;font-size:28px;border:2px solid #FFD700">🦁</div>
+    <div style="color:#C9A86A;font-weight:900;letter-spacing:2px;font-family:'Playfair Display'">LEO CLUB</div>
+  </div>
+  <button class="back" onclick="location.href='index.html'">← Back to Home</button>
+</nav>
+
+<div style="text-align:center;padding:40px 20px;background:radial-gradient(700px at 50% 0%, rgba(201,168,106,0.2), transparent)">
+  <h1 style="font-family:'Playfair Display';font-size:40px;color:#E6C875">Wall of Fame 👑</h1>
+  <p style="color:#8DA2C3;font-size:12px;margin-top:6px">Our proud Gold Members & Top Point Holders</p>
+  <div style="margin-top:16px;display:flex;gap:10px;justify-content:center">
+    <button onclick="showTab('members')" id="btnMembers" style="background:#FFD700;color:#000;padding:10px 20px;border-radius:100px;border:none;font-weight:800;font-size:12px">💎 Gold Members</button>
+    <button onclick="showTab('points')" id="btnPoints" style="background:transparent;border:1.5px solid #C9A86A;color:#E6C875;padding:10px 20px;border-radius:100px;font-weight:700;font-size:12px">🏆 Points Board</button>
+  </div>
+</div>
+
+<div style="max-width:1000px;margin:0 auto;padding:24px">
+
+  <!-- GOLD MEMBERS TAB -->
+  <div id="tabMembers">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+      <h3 style="color:#FFD700">💎 Special Gold Members - Channel Promotion</h3>
+      <button onclick="addMember()" style="background:linear-gradient(90deg,#FFD700,#FFC400);color:#000;padding:8px 16px;border-radius:100px;border:none;font-weight:800;font-size:11px;cursor:pointer">+ Add New Gold Member</button>
+    </div>
+    
+    <div id="membersGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px">
+      <!-- Sample Member 1 - 1st Place -->
+      <div class="badge-card" style="border:2px solid #FFD700">
+        <div style="position:absolute;top:8px;right:8px;background:#FFD700;color:#000;padding:2px 8px;border-radius:100px;font-size:8px;font-weight:900">🥇 1ST PLACE</div>
+        <div style="width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#FFA500);margin:10px auto 0;display:flex;align-items:center;justify-content:center;font-size:32px;border:3px solid #FFD700">👑</div>
+        <h4 style="color:#FFD700;margin-top:10px">Leo Ashen Perera</h4>
+        <div style="background:linear-gradient(90deg,#FFD700,#FFA500);color:#000;padding:4px 12px;border-radius:100px;font-size:9px;font-weight:900;display:inline-block;margin-top:6px">💎 GOLD LEO - FOUNDER</div>
+        <p style="color:#8DA2C3;font-size:10px;margin-top:8px">Joined: Dec 2024</p>
+        <div style="margin-top:10px;display:flex;gap:6px;justify-content:center">
+          <span style="background:rgba(255,215,0,0.15);padding:4px 8px;border-radius:20px;font-size:9px">⭐ 1200 Points</span>
+          <span style="background:rgba(34,197,94,0.15);padding:4px 8px;border-radius:20px;font-size:9px;color:#22C55E">✓ Verified</span>
+        </div>
+        <button style="margin-top:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,215,0,0.3);color:#FFD700;padding:6px 14px;border-radius:100px;font-size:10px;cursor:pointer">📢 Promote in Channel →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POINTS LEADERBOARD TAB -->
+  <div id="tabPoints" style="display:none">
+    <h3 style="color:#FFD700">🏆 Event Points Leaderboard - Top Contributors</h3>
+    <p style="color:#8DA2C3;font-size:11px;margin-top:4px">Each event = points. Top 3 get Gold, Silver, Bronze badges!</p>
+
+    <!-- Add Points Form -->
+    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,106,0.2);border-radius:14px;padding:14px;display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+      <input id="pName" placeholder="Member Name" style="flex:1;min-width:120px;background:rgba(0,0,0,0.4);border:1px solid rgba(201,168,106,0.2);border-radius:8px;padding:10px;color:#fff;font-size:12px">
+      <input id="pEvent" placeholder="Event Name" style="flex:1;min-width:120px;background:rgba(0,0,0,0.4);border:1px solid rgba(201,168,106,0.2);border-radius:8px;padding:10px;color:#fff;font-size:12px">
+      <input id="pPoints" type="number" placeholder="Points" style="width:80px;background:rgba(0,0,0,0.4);border:1px solid rgba(201,168,106,0.2);border-radius:8px;padding:10px;color:#fff;font-size:12px">
+      <button onclick="addPoints()" style="background:#FFD700;color:#000;padding:10px 16px;border-radius:8px;border:none;font-weight:800;font-size:12px;cursor:pointer">+ Add Points</button>
+    </div>
+
+    <div id="leaderboard" style="margin-top:16px">
+      <div class="point-row" style="background:linear-gradient(90deg,rgba(255,215,0,0.15),rgba(255,215,0,0.05));border-color:#FFD700">
+        <div style="display:flex;gap:12px;align-items:center"><span style="font-size:20px">🥇</span><div><div style="color:#FFD700;font-weight:800;font-size:13px">Leo Ashen Perera</div><div style="color:#8DA2C3;font-size:10px">5 Events • Leadership Summit + Charity Run</div></div></div>
+        <div style="text-align:right"><div style="color:#FFD700;font-weight:900;font-size:18px">1,200</div><div style="color:#8DA2C3;font-size:9px">POINTS</div></div>
+      </div>
+      <div class="point-row" style="border-color:rgba(192,192,192,0.4)">
+        <div style="display:flex;gap:12px;align-items:center"><span style="font-size:20px">🥈</span><div><div style="color:#C0C0C0;font-weight:800;font-size:13px">Leo Nimal Silva</div><div style="color:#8DA2C3;font-size:10px">4 Events • Blood Donation + Beach Cleanup</div></div></div>
+        <div style="text-align:right"><div style="color:#C0C0C0;font-weight:900;font-size:18px">950</div><div style="color:#8DA2C3;font-size:9px">POINTS</div></div>
+      </div>
+      <div class="point-row" style="border-color:rgba(205,127,50,0.4)">
+        <div style="display:flex;gap:12px;align-items:center"><span style="font-size:20px">🥉</span><div><div style="color:#CD7F32;font-weight:800;font-size:13px">Leo Kasun Fernando</div><div style="color:#8DA2C3;font-size:10px">3 Events • Tree Planting</div></div></div>
+        <div style="text-align:right"><div style="color:#CD7F32;font-weight:900;font-size:18px">720</div><div style="color:#8DA2C3;font-size:9px">POINTS</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// TAB SWITCH
+function showTab(t){
+  document.getElementById('tabMembers').style.display = t==='members' ? 'block' : 'none';
+  document.getElementById('tabPoints').style.display = t==='points' ? 'block' : 'none';
+  document.getElementById('btnMembers').style.background = t==='members' ? '#FFD700' : 'transparent';
+  document.getElementById('btnMembers').style.color = t==='members' ? '#000' : '#E6C875';
+  document.getElementById('btnMembers').style.border = t==='members' ? 'none' : '1.5px solid #C9A86A';
+  document.getElementById('btnPoints').style.background = t==='points' ? '#FFD700' : 'transparent';
+  document.getElementById('btnPoints').style.color = t==='points' ? '#000' : '#E6C875';
+  document.getElementById('btnPoints').style.border = t==='points' ? 'none' : '1.5px solid #C9A86A';
+}
+
+// LOAD FROM LOCALSTORAGE
+let members = JSON.parse(localStorage.getItem('goldMembers')||'[]');
+let points = JSON.parse(localStorage.getItem('pointsBoard')||'[]');
+
+function renderMembers(){
+  const grid = document.getElementById('membersGrid');
+  // keep first sample, add others
+  members.forEach((m,i)=>{
+    const place = i===0 ? '🥇 1ST PLACE' : i===1 ? '🥈 2ND PLACE' : i===2 ? '🥉 3RD PLACE' : '⭐ MEMBER';
+    grid.innerHTML += `
+    <div class="badge-card">
+      <div style="position:absolute;top:8px;right:8px;background:#FFD700;color:#000;padding:2px 8px;border-radius:100px;font-size:8px;font-weight:900">${place}</div>
+      <div style="width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#FFA500);margin:10px auto 0;display:flex;align-items:center;justify-content:center;font-size:32px;border:3px solid #FFD700">👑</div>
+      <h4 style="color:#FFD700;margin-top:10px">${m.name}</h4>
+      <div style="background:linear-gradient(90deg,#FFD700,#FFA500);color:#000;padding:4px 12px;border-radius:100px;font-size:9px;font-weight:900;display:inline-block;margin-top:6px">💎 ${m.badge}</div>
+      <p style="color:#8DA2C3;font-size:10px;margin-top:8px">Joined: ${m.date}</p>
+      <button style="margin-top:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,215,0,0.3);color:#FFD700;padding:6px 14px;border-radius:100px;font-size:10px">📢 Promote in Channel →</button>
+    </div>`;
+  });
+}
+
+function addMember(){
+  const name = prompt('Gold Member Name?');
+  if(!name) return;
+  const badge = prompt('Badge? (Ex: GOLD LEO - FOUNDER, GOLD LEO - VIP)','GOLD LEO - VIP');
+  const obj = {name, badge, date: new Date().toLocaleDateString()};
+  members.unshift(obj);
+  localStorage.setItem('goldMembers', JSON.stringify(members));
+  location.reload();
+}
+
+function addPoints(){
+  const name = document.getElementById('pName').value;
+  const event = document.getElementById('pEvent').value;
+  const pts = parseInt(document.getElementById('pPoints').value);
+  if(!name||!pts) return alert('Name & Points danna!');
+  const board = document.getElementById('leaderboard');
+  const newRow = document.createElement('div');
+  newRow.className='point-row';
+  newRow.innerHTML=`<div style="display:flex;gap:12px;align-items:center"><span style="font-size:20px">⭐</span><div><div style="color:#fff;font-weight:800;font-size:13px">${name}</div><div style="color:#8DA2C3;font-size:10px">${event||'Event'}</div></div></div><div style="text-align:right"><div style="color:#FFD700;font-weight:900;font-size:18px">${pts}</div><div style="color:#8DA2C3;font-size:9px">POINTS</div></div>`;
+  board.appendChild(newRow);
+  // save
+  let saved = JSON.parse(localStorage.getItem('pointsBoard')||'[]');
+  saved.push({name,event,pts});
+  localStorage.setItem('pointsBoard', JSON.stringify(saved));
+  document.getElementById('pName').value='';document.getElementById('pEvent').value='';document.getElementById('pPoints').value='';
+}
+renderMembers();
+</script>
+</body>
+</html>

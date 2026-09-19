@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEO CLUB | Official Homepage</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0B1F45;color:#fff;font-family:'Outfit',sans-serif;overflow-x:hidden}
+*{box-sizing: border-box;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:12px 40px;background:#0A1F44;border-bottom:1.5px solid #C9A86A;position:sticky;top:0;z-index:99}
+.nav-left{display:flex;align-items:center;gap:12px}
+.nav-left img{width:68px;height:68px; border-radius: 50%; object-fit:contain}
+.nav-left span{font-family:'Playfair Display';color:#C9A86A;letter-spacing:2px;font-weight:700;font-size:14px}
+.menu{display:flex;gap:28px;align-items:center}
+.menu button{background:none;border:none;color:#fff;font-size:14px;font-weight:500;cursor:pointer;padding-bottom:4px;border-bottom:2px solid transparent;transition:0.2s}
+.menu button.active{color:#E6C875;border-color:#E6C875}
+.right{display:flex;align-items:center;gap:16px}
+.user{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center}
+.join{background:linear-gradient(180deg,#E6C875,#C9A86A);color:#0A1F44;padding:10px 22px;border-radius:8px;border:none;font-weight:800;cursor:pointer;box-shadow:0 4px 15px rgba(201,168,106,0.4)}
+.hero{display:flex;justify-content:space-between;align-items:center;padding:50px 60px;background:radial-gradient(800px at 70% 40%, rgba(201,168,106,0.18), transparent), linear-gradient(180deg,#0D244A,#0A1F44);position:relative;overflow:hidden}
+.hero-left{max-width:560px}
+.hero-left h1{font-family:'Playfair Display';font-size:64px;color:#E6C875;line-height:0.9;letter-spacing:1px}
+.hero-left h2{color:#E6C875;font-size:18px;letter-spacing:1px;margin-top:8px;font-weight:600}
+.hero-left h3{font-size:30px;margin-top:12px;line-height:1.1}
+.hero-left p{color:#A8B5CC;font-size:13px;line-height:1.6;margin-top:12px}
+.hero-btns{display:flex;gap:14px;margin-top:22px}
+.btn-gold{background:linear-gradient(180deg,#E6C875,#C9A86A);color:#0A1F44;padding:12px 22px;border-radius:8px;border:none;font-weight:800;cursor:pointer}
+.btn-outline{border:1px solid #C9A86A;color:#E6C875;background:transparent;padding:12px 22px;border-radius:8px;font-weight:600;cursor:pointer}
+.hero-right img{width:420px;height:420px;  border-radius: 50%; object-fit:contain;filter:drop-shadow(0 0 30px rgba(201,168,106,0.6)) }
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:22px 60px;background:#2A4A7A}
+.stat{border:1px solid #C9A86A;padding:16px;border-radius:6px;display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.03)}
+.stat h4{color:#E6C875;font-size:20px}
+.stat p{color:#fff;font-size:11px;opacity:0.7}
+.why{padding:24px 60px;background:#8AA0C2}
+.why h2{text-align:center;color:#0A1F44;font-size:20px;margin-bottom:16px}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#E8EEF7;border-radius:8px;padding:18px;display:flex;gap:12px}
+.card h4{color:#0A1F44;font-size:15px}
+.card p{color:#4A5A73;font-size:11px;margin-top:4px;line-height:1.4}
+.footer{background:#0A1F44;text-align:center;padding:14px;border-top:1px solid #C9A86A;color:#C9A86A;font-size:11px;letter-spacing:1px}
+.tab{display:none}
+.tab.active{display:block}
+.special-tab-btn{background:linear-gradient(90deg,#FFD700,#FFC400)!important;color:#0A1F44!important;padding:10px 18px!important;border-radius:100px!important;font-weight:900!important;box-shadow:0 5px 20px rgba(255,215,0,0.4)!important}
+.special-box{max-width:480px;margin:40px auto;background:rgba(255,255,255,0.05);border:1.5px solid #FFD700;border-radius:20px;padding:30px;text-align:center}
+.special-box input{width:100%;padding:16px;border-radius:12px;background:rgba(0,0,0,0.4);border:1.5px solid rgba(255,215,0,0.3);color:#FFD700;font-size:26px;letter-spacing:8px;text-align:center;margin-top:12px;outline:none}
+#grid{display: grid;grid-template-columns: 1fr  1fr;gap: 10px;}
+@media(max-width:769px){
+  #grid{ grid-template-columns: 1fr!important;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <img src="nav_img.png" alt="LEO CLUB LOGO">
+    <span>LEO CLUB</span>
+  </div>
+  <div class="menu">
+    <button class="active" onclick="openTab('home',this)">Home</button>
+     <a href="about.html" ><button >About</button></a>
+     <a href="event.html" ><button>Events</button></a>
+     <a href="Membership .html" ><button>Membership</button></a>
+    <a href="Impact .html" ><button >Impact</button></a>
+    <a href="Members3.html" ><button>Members</button></a>
+    <a href="Contact .html" ><button>Contact</button></a>
+    <a href="admin.html" ><button>🔐ADMIN</button></a>
+    
+    <a href="project3.html"><button class="special-tab-btn" >🎉 MEGA DRAW</button></a>
+  </div>
+  
+</nav>
+
+<div id="home" class="tab active">
+  <div class="hero">
+    <div class="hero-left">
+      <h1>LEO CLUB</h1>
+      <h2>Lead • Experience • Opportunity</h2>
+      <h3>Empowering Youth to Lead, Serve & Grow</h3>
+      <p>We are a global youth organization developing leaders through service, friendship, and community impact. Join thousands of young changemakers making a difference locally and around the world.</p>
+      <div class="hero-btns">
+        <button class="btn-gold">Become A Member</button>
+        <button class="btn-outline">Explore Our Projects</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="hero_logo.png" alt="LEO BIG LOGO">
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div style="font-size:32px">👥</div><div><h4>500+ Members</h4><p>Active Young Leaders Worldwide</p></div></div>
+    <div class="stat"><div style="font-size:32px">🎯</div><div><h4>100+ Projects</h4><p>Community Service Initiatives</p></div></div>
+    <div class="stat"><div style="font-size:32px">📍</div><div><h4>25+ Countries</h4><p>Chapters Across the Globe</p></div></div>
+  </div>
+
+  <div class="why">
+    <h2>Why Join Leo Club?</h2>
+    <div class="why-grid">
+      <div class="card"><div style="font-size:36px">⭐</div><div><h4>Leadership Development</h4><p>Build skills in leadership, teamwork, and public speaking through hands-on programs.</p></div></div>
+      <div class="card"><div style="font-size:36px">🤝</div><div><h4>Community Service</h4><p>Make real impact by leading service projects that uplift your local community.</p></div></div>
+      <div class="card"><div style="font-size:36px">🌐</div><div><h4>Global Network</h4><p>Connect with peers worldwide and grow your network of changemakers.</p></div></div>
+    </div>
+  </div>
+</div>
+
+ 
+</div>
+<!-- ========== SPONSORS SECTION - A/WHC LEOS PRIDE ========== -->
+<section id="sponsors" style="background:#0A1931;padding:40px 0;border-top:2px solid #FFD700;border-bottom:2px solid #FFD700;overflow:hidden">
+<div style="max-width:1200px;margin:0 auto;padding:0 20px">
+
+<!-- TITLE -->
+<div style="text-align:center;margin-bottom:24px">
+<div style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,215,0,0.1);border:1px solid #FFD700;padding:8px 18px;border-radius:100px">
+<span style="color:#FFD700;font-weight:900;font-size:12px;letter-spacing:1px">🤝 OUR PROUD PARTNERS</span>
+</div>
+<h2 style="font-family:'Playfair Display',serif;color:#fff;font-size:28px;font-weight:900;margin-top:12px">Powered by <span style="background:linear-gradient(90deg,#FFD700,#FFA500);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Generosity</span></h2>
+<p style="color:#8DA2C3;font-size:12px;margin-top:6px">Sponsors la nisa thama ape service projects karanna puluwan</p>
+</div>
+
+<!-- GOLD SPONSORS -->
+<div style="margin-bottom:20px">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+<div style="width:28px;height:28px;background:linear-gradient(135deg,#FFD700,#FFA500);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px">👑</div>
+<span style="color:#FFD700;font-weight:900;font-size:13px;letter-spacing:1px">GOLD SPONSORS</span>
+<span style="background:#FFD700;color:#000;padding:2px 8px;border-radius:100px;font-size:9px;font-weight:900">Rs.500+</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+<div style="background:linear-gradient(145deg,rgba(255,215,0,0.15),rgba(255,215,0,0.05));border:2px solid #FFD700;border-radius:16px;padding:18px;text-align:center;position:relative">
+<div style="position:absolute;top:8px;right:8px;background:#FFD700;color:#000;padding:2px 6px;border-radius:100px;font-size:8px;font-weight:900">GOLD</div>
+<div ><img style="width:60px;height:60px;background:#fff;border-radius:12px;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:28px" src="Screenshot_20260916_224438_WhatsApp.jpg"> </div>
+<div style="color:#fff;font-weight:800;margin-top:10px;font-size:14px">Company Name</div>
+<div style="color:#C9A86A;font-size:10px">Main Sponsor</div>
+</div>
+<div style="background:linear-gradient(145deg,rgba(255,215,0,0.15),rgba(255,215,0,0.05));border:2px solid #FFD700;border-radius:16px;padding:18px;text-align:center;position:relative">
+<div style="position:absolute;top:8px;right:8px;background:#FFD700;color:#000;padding:2px 6px;border-radius:100px;font-size:8px;font-weight:900">GOLD</div>
+<div style="width:60px;height:60px;background:#fff;border-radius:12px;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:28px">🏦</div>
+<div style="color:#fff;font-weight:800;margin-top:10px;font-size:14px">Your Logo Here</div>
+<div style="color:#C9A86A;font-size:10px">Gold Partner - Rs.500</div>
+</div>
+<div style="background:linear-gradient(145deg,rgba(255,215,0,0.08),rgba(255,215,0,0.02));border:2px dashed #FFD700;border-radius:16px;padding:18px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer" onclick="window.open('https://wa.me/94773053603?text=Hi%20I%20want%20to%20be%20Gold%20Sponsor','_blank')">
+<div style="width:50px;height:50px;border:2px dashed #FFD700;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;color:#FFD700">+</div>
+<div style="color:#FFD700;font-weight:800;margin-top:8px;font-size:12px">Become Gold Sponsor</div>
+<div style="color:#8DA2C3;font-size:9px">Click to join</div>
+</div>
+</div>
+</div>
+
+<!-- SILVER SPONSORS - AUTO SCROLL -->
+<div style="margin-bottom:20px">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+<div style="width:28px;height:28px;background:linear-gradient(135deg,#C0C0C0,#A8A8A8);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px">🥈</div>
+<span style="color:#C0C0C0;font-weight:900;font-size:13px;letter-spacing:1px">SILVER SPONSORS</span>
+<span style="background:#C0C0C0;color:#000;padding:2px 8px;border-radius:100px;font-size:9px;font-weight:900">Rs.250+</span>
+</div>
+<div style="position:relative;overflow:hidden;background:rgba(255,255,255,0.03);border:1px solid rgba(192,192,192,0.2);border-radius:14px;padding:14px 0">
+<div style="display:flex;gap:14px;animation:scroll 25s linear infinite;white-space:nowrap" id="silverScroll">
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">🏪</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Shop Name</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">🍔</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Food City</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">💇</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Salon Name</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">📚</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Book Shop</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">🏢</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Company</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">🏪</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Shop Name</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">💇</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Salon Name</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">📚</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Book Shop</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">🍔</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Food City</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">💇</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Salon Name</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">📚</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Book Shop</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">🏢</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Company</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">🏪</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Shop Name</div></div>
+<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">💇</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Salon Name</div></div>
+</div>
+</div>
+</div>
+
+<!-- BRONZE SPONSORS -->
+<div>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+<div style="width:28px;height:28px;background:linear-gradient(135deg,#CD7F32,#A0522D);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px">🥉</div>
+<span style="color:#CD7F32;font-weight:900;font-size:13px;letter-spacing:1px">BRONZE SUPPORTERS</span>
+<span style="background:#CD7F32;color:#fff;padding:2px 8px;border-radius:100px;font-size:9px;font-weight:900">Rs.100+</span>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<span style="background:rgba(255,255,255,0.06);border:1px solid rgba(205,127,50,0.3);padding:8px 14px;border-radius:100px;font-size:11px;color:#C9A86A">🏪 Local Shop 1</span>
+<span style="background:rgba(255,255,255,0.06);border:1px solid rgba(205,127,50,0.3);padding:8px 14px;border-radius:100px;font-size:11px;color:#C9A86A">💈 Barber Shop</span>
+<span style="background:rgba(255,255,255,0.06);border:1px solid rgba(205,127,50,0.3);padding:8px 14px;border-radius:100px;font-size:11px;color:#C9A86A">☕ Cafe Name</span>
+<span style="background:rgba(255,255,255,0.06);border:1px solid rgba(205,127,50,0.3);padding:8px 14px;border-radius:100px;font-size:11px;color:#C9A86A">📱 Phone Shop</span>
+<span style="background:rgba(255,255,255,0.03);border:1px dashed rgba(205,127,50,0.4);padding:8px 14px;border-radius:100px;font-size:11px;color:#8DA2C3;cursor:pointer" onclick="window.open('https://wa.me/9477?text=Want%20to%20be%20Bronze%20Supporter','_blank')">+ Join as Bronze</span>
+</div>
+</div>
+
+<!-- BECOME SPONSOR CTA -->
+<div style="margin-top:28px;background:linear-gradient(90deg,#FFD700,#FFA500);border-radius:16px;padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+<div><div style="color:#000;font-weight:900;font-size:16px">Want to be a Sponsor? 🤝</div><div style="color:rgba(0,0,0,0.7);font-size:11px;margin-top:2px">Support our service projects & get featured here • Tax benefits available</div></div>
+<button onclick="window.open('https://wa.me/94773053603?text=Hi%20A/WHC%20Leos%20Pride%20-%20I%20want%20to%20be%20a%20sponsor','_blank')" style="background:#000;color:#FFD700;border:none;padding:12px 22px;border-radius:100px;font-weight:900;cursor:pointer">💚 WhatsApp Us</button>
+</div>
+
+</div>
+<style>
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+#silverScroll:hover{animation-play-state:paused}
+</style>
+</section>
+<!-- ========== END SPONSORS SECTION ========== -->
+
+ <div class="footer">LEO CLUB • Official Homepage • In partnership with Lions Clubs International</div>
+ 
+<div id="about" class="tab" style="padding:40px"><h2>About Leo Club</h2></div>
+<div id="projects" class="tab" style="padding:40px"><h2>Projects</h2></div>
+<div id="events" class="tab" style="padding:40px"><h2>Events</h2></div>
+<div id="membership" class="tab" style="padding:40px"><h2>Membership</h2></div>
+<div id="impact" class="tab" style="padding:40px"><h2>Impact</h2></div>
+<div id="resources" class="tab" style="padding:40px"><h2>Resources</h2></div>
+<div id="contact" class="tab" style="padding:40px"><h2>Contact</h2></div>
+
+<script>
+
+</script>
+</body>
+</html>

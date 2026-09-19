@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events - LEO CLUB</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0A1931;color:#fff;font-family:'Outfit',sans-serif}
+nav{display:flex;justify-content:space-between;align-items:center;padding:12px 40px;background:#0A1F44;border-bottom:1.5px solid #C9A86A;position:sticky;top:0;z-index:99}
+.nav-left{display:flex;align-items:center;gap:12px}
+.nav-left img{width:68px;height:68px; border-radius: 50%; object-fit:contain}
+.nav-left span{font-family:'Playfair Display';color:#C9A86A;letter-spacing:2px;font-weight:700;font-size:14px}
+.menu{display:flex;gap:28px;align-items:center}
+.logo{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid #FFD700}
+.back{border:1px solid #C9A86A;color:#E6C875;padding:9px 18px;border-radius:100px;background:rgba(255,255,255,0.06);font-weight:700;font-size:12px;cursor:pointer}
+.back:hover{background:#FFD700;color:#0A1931}
+.event-card{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,106,0.25);border-radius:20px;padding:20px;display:flex;gap:18px;transition:0.3s}
+.event-card:hover{transform:translateY(-4px);border-color:#FFD700;box-shadow:0 12px 35px rgba(201,168,106,0.2)}
+.date-box{min-width:70px;height:70px;background:linear-gradient(135deg,#FFD700,#FFA500);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#000}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+  
+    <img src="nav_img.png" alt="LEO CLUB LOGO">
+    <div style="color:#C9A86A;font-weight:900;letter-spacing:2px;font-family:'Playfair Display'">LEO CLUB</div>
+</div>
+  
+  <div style="display:flex;gap:10px">
+    <button class="back" onclick="goHome()">← Back to Home</button>
+    <button style="background:#FFD700;color:#0A1931;padding:9px 16px;border-radius:100px;border:none;font-weight:900;font-size:12px">Events</button>
+  </div>
+</nav>
+
+<div style="text-align:center;padding:50px 20px 30px;background:radial-gradient(800px at 50% 0%, rgba(201,168,106,0.2), transparent), linear-gradient(180deg,#0D244A,#0A1F44)">
+  <div style="display:inline-block;background:linear-gradient(90deg,#E6C875,#C9A86A);color:#0A1F44;padding:6px 18px;border-radius:100px;font-size:10px;font-weight:900;letter-spacing:3px">UPCOMING & PAST</div>
+  <h1 style="font-family:'Playfair Display';font-size:44px;color:#E6C875;margin-top:14px">Our Events</h1>
+  <p style="color:#8DA2C3;font-size:13px;margin-top:8px">Join our leadership, service, and fellowship events throughout the year</p>
+</div>
+
+<div style="max-width:900px;margin:0 auto;padding:30px;display:flex;flex-direction:column;gap:16px">
+
+  <!-- UPCOMING EVENT 1 -->
+  <div class="event-card" style="border-left:4px solid #22C55E">
+    <div class="date-box">
+      <div style="font-size:10px;font-weight:900;letter-spacing:1px"><!--month--></div>
+      <div style="font-size:28px;font-weight:900;line-height:1"><!--DATE--></div>
+      <div style="font-size:10px"><!--year--></div>
+    </div>
+    <div style="flex:1">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <span style="background:rgba(34,197,94,0.15);color:#22C55E;border:1px solid rgba(34,197,94,0.3);padding:4px 10px;border-radius:100px;font-size:9px;font-weight:800">● UPCOMING</span>
+        <span style="color:#8DA2C3;font-size:11px">UPCOMING</span>
+      </div>
+      <h3 style="color:#fff;margin-top:10px;font-size:18px">Selling Book Marks</h3>
+      <p style="color:#8DA2C3;font-size:12px;line-height:1.6;margin-top:6px">20+ Desings</p>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <button style="background:#FFD700;color:#000;padding:7px 14px;border-radius:20px;border:none;font-weight:800;font-size:11px;cursor:pointer">Buy Now →</button>
+        <button style="background:transparent;border:1px solid rgba(255,255,255,0.15);color:#fff;padding:7px 14px;border-radius:20px;font-size:11px">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- UPCOMING EVENT 2 -->
+  <div class="event-card" style="border-left:4px solid #3B82F6">
+    <div class="date-box" style="background:linear-gradient(135deg,#3B82F6,#1D4ED8)">
+      <div style="font-size:10px;font-weight:900;color:#fff"><!--MONTH--></div>
+      <div style="font-size:28px;font-weight:900;line-height:1;color:#fff"><!--DATE--></div>
+      <div style="font-size:10px;color:#fff"><!--year--></div>
+    </div>
+    <div style="flex:1">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <span style="background:rgba(59,130,246,0.15);color:#3B82F6;border:1px solid rgba(59,130,246,0.3);padding:4px 10px;border-radius:100px;font-size:9px;font-weight:800">● UPCOMING</span>
+        <span style="color:#8DA2C3;font-size:11px">UPCOMING</span>
+      </div>
+      <h3 style="color:#fff;margin-top:10px;font-size:18px">UPCOMING EVENT</h3>
+      <p style="color:#8DA2C3;font-size:12px;line-height:1.6;margin-top:6px"></p>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <button style="background:#FFD700;color:#000;padding:7px 14px;border-radius:20px;border:none;font-weight:800;font-size:11px;cursor:pointer">Join Run →</button>
+        <button style="background:transparent;border:1px solid rgba(255,255,255,0.15);color:#fff;padding:7px 14px;border-radius:20px;font-size:11px">Route Map</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAST EVENT -->
+  <div class="event-card" style="opacity:0.7;border-left:4px solid #6B7280">
+    <div class="date-box" style="background:#2A3A5A">
+      <div style="font-size:10px;font-weight:900;color:#8DA2C3"><!--MONTH--></div>
+      <div style="font-size:28px;font-weight:900;line-height:1;color:#8DA2C3"><!--DATE--></div>
+      <div style="font-size:10px;color:#8DA2C3">2026</div>
+    </div>
+    <div style="flex:1">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <span style="background:rgba(107,114,128,0.15);color:#6B7280;border:1px solid rgba(107,114,128,0.3);padding:4px 10px;border-radius:100px;font-size:9px;font-weight:800">✓ COMPLETED</span>
+        <span style="color:#8DA2C3;font-size:11px">📍 35+ Participants</span>
+      </div>
+      <h3 style="color:#C5D1E8;margin-top:10px;font-size:18px">ENVIROMENT</h3>
+      <p style="color:#8DA2C3;font-size:12px;line-height:1.6;margin-top:6px">Clean ENVIROMENT & Collect Grabedge</p>
+    </div>
+  </div>
+
+  <!-- CALENDAR BUTTON -->
+  <div style="text-align:center;margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <button onclick="goHome()" style="background:linear-gradient(90deg,#FFD700,#FFC400);color:#0A1931;padding:14px 32px;border-radius:100px;border:none;font-weight:900;cursor:pointer;box-shadow:0 8px 25px rgba(255,215,0,0.4)">🏠 Back to Home</button>
+    <button style="background:transparent;border:1.5px solid rgba(201,168,106,0.4);color:#E6C875;padding:14px 32px;border-radius:100px;font-weight:700;cursor:pointer">📅 View Full Calendar</button>
+  </div>
+
+</div>
+
+<script>
+function goHome(){ window.location.href="index.html"; }
+</script>
+
+</body>
+</html>

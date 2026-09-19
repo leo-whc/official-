@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WINLUX PREMIUM | 1st 2nd 3rd Place Check</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Sinhala:wght@600;800&family=Space+Grotesk:wght@500;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{min-height:100vh;background:#050505;background-image:radial-gradient(900px at 50% -20%, rgba(255,215,0,0.18), transparent 70%);display:flex;align-items:center;justify-content:center;padding:20px;font-family:'Space Grotesk',sans-serif}
+.card{width:100%;max-width:500px;background:linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));border:1px solid rgba(255,215,0,0.28);border-radius:28px;backdrop-filter:blur(28px);padding:40px 32px;text-align:center;box-shadow:0 40px 120px rgba(0,0,0,0.9), 0 0 80px rgba(255,215,0,0.12)}
+.badge{display:inline-block;background:linear-gradient(90deg, #FFF3B0, #FFD700, #FFA500);color:#000;font-size:11px;font-weight:800;padding:8px 18px;border-radius:100px;letter-spacing:3px;margin-bottom:20px;box-shadow:0 8px 24px rgba(255,215,0,0.35)}
+h1{font-family:'Playfair Display';color:#fff;font-size:34px;font-weight:900;line-height:0.9;margin-bottom:8px}h1 span{color:#FFD700}
+h2{font-family:'Noto Serif Sinhala';color:#FCEEA1;font-size:22px;margin-bottom:10px}
+p.sub{color:rgba(255,255,255,0.45);font-size:13px;margin-bottom:28px}
+.input-box{background:rgba(0,0,0,0.55);border:1.8px solid rgba(255,255,255,0.12);border-radius:18px;padding:20px;width:100%;color:#FFD700;font-size:30px;font-weight:700;letter-spacing:10px;text-align:center;outline:none;transition:0.3s}
+.input-box:focus{border-color:#FFD700;box-shadow:0 0 0 5px rgba(255,215,0,0.12), 0 0 35px rgba(255,215,0,0.25)}
+.btn{width:100%;margin-top:20px;background:linear-gradient(180deg, #FFF8C5, #FFD700, #E6A500);color:#000;border:none;padding:18px;border-radius:18px;font-size:15px;font-weight:800;letter-spacing:2px;cursor:pointer;box-shadow:0 14px 35px rgba(255,215,0,0.4);transition:0.25s}
+.btn:hover{transform:translateY(-3px)}
+.result{margin-top:24px;padding:0;border-radius:18px;display:none;overflow:hidden;animation:pop 0.5s ease}
+@keyframes pop{from{transform:scale(0.9);opacity:0}to{transform:scale(1);opacity:1}}
+.place-header{padding:14px;font-weight:800;letter-spacing:2px;font-size:13px}
+.place-body{padding:22px;background:rgba(0,0,0,0.4)}
+.place-1.place-header{background:linear-gradient(90deg,#FFD700,#FFA500);color:#000}
+.place-2.place-header{background:linear-gradient(90deg,#C0C0C0,#A8A8A8);color:#000}
+.place-3.place-header{background:linear-gradient(90deg,#CD7F32,#A05A2C);color:#fff}
+.prize{font-size:32px;font-weight:900;color:#FFD700;margin:10px 0}
+.small{color:rgba(255,255,255,0.22);font-size:10px;margin-top:20px;letter-spacing:1.5px}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="badge">★ PREMIUM LOTTERY ★</div>
+  <h1>CHECK <span>WIN</span></h1>
+  <h2>වාසනාව පරීක්ෂා කරන්න</h2>
+  <p class="sub">ඔබේ අවසන් ඉලක්කම් 5 ඇතුලත් කරන්න</p>
+  <input id="pinInput" class="input-box" type="tel" maxlength="5" placeholder="•••••">
+  <button class="btn" onclick="checkPin()">CHECK NOW →</button>
+  <div id="resultBox" class="result"></div>
+  <p class="small">1ST • 2ND • 3RD PLACE VERIFICATION</p>
+</div>
+
+<script>
+// 1,2,3 place wena wenama map karala
+const winners = {
+  "12345": { place: 1, title: "1ST PLACE WINNER", prize: "LKR 50,00,000", emoji: "🥇", msg: "ප්‍රථම ස්ථානය!" },
+  "56373": { place: 2, title: "2ND PLACE WINNER", prize: "LKR 25,00,000", emoji: "🥈", msg: "දෙවන ස්ථානය!" },
+  "64829": { place: 3, title: "3RD PLACE WINNER", prize: "LKR 10,00,000", emoji: "🥉", msg: "තෙවන ස්ථානය!" }
+};
+
+function checkPin(){
+  const input = document.getElementById('pinInput').value.trim();
+  const box = document.getElementById('resultBox');
+
+  if(input.length!== 5){
+    box.style.display="block"; box.className="result";
+    box.innerHTML=`<div class="place-body" style="color:#FF8E8E">⚠️ ඉලක්කම් 5ක් දාන්න</div>`;
+    return;
+  }
+
+  if(winners[input]){
+    const w = winners[input];
+    box.className = `result place-${w.place}`;
+    box.style.display="block";
+    box.innerHTML = `
+      <div class="place-header">${w.emoji} ${w.title} ${w.emoji}</div>
+      <div class="place-body">
+        <div style="color:#fff;font-family:'Noto Serif Sinhala';font-size:18px;margin-bottom:5px">${w.msg} සුබ පැතුම්!</div>
+        <div class="prize">${w.prize}</div>
+        <div style="color:rgba(255,255,255,0.6);font-size:13px">ඔබේ PIN එක <b style="color:#FFD700;letter-spacing:3px;font-size:18px">${input}</b></div>
+        <div style="margin-top:15px">
+          <a href="https://wa.me/947XXXXXXXX?text=මම ${w.title} දිනා ඇත PIN:${input}" style="display:inline-block;background:#fff;color:#000;padding:12px 22px;border-radius:12px;text-decoration:none;font-weight:800;font-size:13px">🎉 ත්‍යාගය ලබාගන්න</a>
+        </div>
+      </div>
+    `;
+    // confetti
+    for(let i=0;i<50;i++){const d=document.createElement('div');d.style.position='fixed';d.style.left=Math.random()*100+'vw';d.style.top='-10px';d.style.width='8px';d.style.height='8px';d.style.background=w.place==1?'#FFD700':w.place==2?'#C0C0C0':'#CD7F32';d.style.borderRadius='2px';d.style.animation=`fall ${2+Math.random()*2}s linear forwards`;document.body.appendChild(d);setTimeout(()=>d.remove(),3000);}
+  } else {
+    box.className="result"; box.style.display="block";
+    box.innerHTML=`<div class="place-body" style="background:rgba(255,70,70,0.08);border:1px solid rgba(255,70,70,0.22);border-radius:18px;color:#FF8E8E">😔 <b>${input}</b> දිනා නැත<br><span style="font-size:12px;opacity:0.7">නැවත උත්සාහ කරන්න</span></div>`;
+  }
+}
+const s=document.createElement('style');s.innerHTML='@keyframes fall{to{transform:translateY(100vh) rotate(600deg)}}';document.head.appendChild(s);
+</script>
+</body>
+</html>

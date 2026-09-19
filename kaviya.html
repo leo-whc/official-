@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaviya Gold - MEGA DROP</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;900&display=swap" rel="stylesheet">
+</head><body style="background:#050A18;margin:0;font-family:Outfit;color:#fff;overflow-x:hidden">
+
+<!-- TOP ANNOUNCEMENT BAR -->
+<div style="background:linear-gradient(90deg,#FFD700,#FFA500,#FFD700);color:#000;padding:6px;text-align:center;font-weight:900;font-size:11px;white-space:nowrap;overflow:hidden">
+<span style="animation:marquee 15s linear infinite;display:inline-block">🔥 NEW DROP LIVE • FREE DELIVERY OVER Rs.5000 • SPIN & WIN 20% OFF • 12 PEOPLE VIEWING NOW 🔥 NEW DROP LIVE • FREE DELIVERY •</span>
+</div>
+
+<!-- NAV + LIVE -->
+<div style="display:flex;justify-content:space-between;padding:12px 20px;background:#000;border-bottom:2px solid #FFD700;position:sticky;top:0;z-index:99;align-items:center">
+<div style="display:flex;gap:10px;align-items:center"><div style="width:36px;height:36px;background:linear-gradient(135deg,#FFD700,#FFA500);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#000">K</div><div><div style="color:#FFD700;font-weight:900;font-size:13px">KAVIYA GOLD</div><div style="font-size:8px;color:#8DA2C3">MEGA DROP 2026</div></div></div>
+<div style="display:flex;gap:8px;align-items:center">
+<div style="background:rgba(255,0,0,0.15);border:1px solid #FF0000;padding:5px 10px;border-radius:100px;display:flex;gap:6px;align-items:center"><div style="width:7px;height:7px;background:#FF0000;border-radius:50%;animation:blink 1s infinite"></div><span style="color:#FF5252;font-size:9px;font-weight:900" id="liveCount">14 VIEWING</span></div>
+<div style="background:#FFD700;color:#000;padding:6px 12px;border-radius:100px;font-size:10px;font-weight:900">🛒 <span id="cartCount">0</span></div>
+</div>
+</div>
+
+<div style="max-width:1000px;margin:0 auto;padding:20px">
+<!-- HERO + VOICE -->
+<div style="background:linear-gradient(135deg,#FFD700,#FFA500);border-radius:20px;padding:24px;color:#000;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;position:relative;overflow:hidden">
+<div><h1 style="font-size:26px;font-weight:900;margin:0">MEGA DROP LIVE 👑</h1><p style="font-size:12px;opacity:0.7;margin-top:4px">Spin karala 20% off dinnna • Secret code: KAVIYA2026</p></div>
+<div style="display:flex;gap:8px"><button onclick="document.getElementById('voice').play()" style="background:#000;color:#FFD700;border:none;padding:10px 16px;border-radius:100px;font-weight:900;font-size:11px">🎙️ PLAY WELCOME</button><button onclick="document.getElementById('spinModal').style.display='flex'" style="background:#000;color:#fff;border:none;padding:10px 16px;border-radius:100px;font-weight:900;font-size:11px">🎡 SPIN & WIN</button></div>
+<audio id="voice"><source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg"></audio>
+</div>
+
+<!-- PRODUCTS 3D TILT -->
+<h3 style="color:#FFD700;margin-top:24px">🛍️ 3D COLLECTION - Mouse eka aran yanna</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:12px">
+<div class="tilt" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,215,0,0.3);border-radius:16px;padding:14px;text-align:center;transition:0.4s"><div style="font-size:38px">👕</div><div style="font-size:12px;font-weight:800;margin-top:6px">Kaviya Gold Tee</div><div style="color:#FFD700;font-weight:900">Rs.2500 <span style="color:#8DA2C3;text-decoration:line-through;font-size:10px">Rs.3000</span></div><div style="color:#25D366;font-size:9px">✓ 3 sold today</div><button onclick="addCart()" style="width:100%;margin-top:8px;background:#FFD700;border:none;padding:8px;border-radius:100px;font-weight:900;font-size:11px">ADD TO CART</button></div>
+<div class="tilt" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,215,0,0.3);border-radius:16px;padding:14px;text-align:center;transition:0.4s"><div style="font-size:38px">🧥</div><div style="font-size:12px;font-weight:800;margin-top:6px">Gaming Hoodie</div><div style="color:#FFD700;font-weight:900">Rs.4500</div><div style="color:#25D366;font-size:9px">✓ Limited 10 left</div><button onclick="addCart()" style="width:100%;margin-top:8px;background:#FFD700;border:none;padding:8px;border-radius:100px;font-weight:900;font-size:11px">ADD TO CART</button></div>
+<div class="tilt" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,215,0,0.3);border-radius:16px;padding:14px;text-align:center;transition:0.4s"><div style="font-size:38px">⌚</div><div style="font-size:12px;font-weight:800;margin-top:6px">Gold Wristband</div><div style="color:#FFD700;font-weight:900">Rs.500</div><div style="color:#25D366;font-size:9px">✓ Hot selling</div><button onclick="addCart()" style="width:100%;margin-top:8px;background:#FFD700;border:none;padding:8px;border-radius:100px;font-weight:900;font-size:11px">ADD TO CART</button></div>
+<div class="tilt" style="background:linear-gradient(145deg,rgba(255,215,0,0.2),rgba(0,0,0,0.5));border:2px dashed #FFD700;border-radius:16px;padding:14px;text-align:center;transition:0.4s"><div style="font-size:38px">📦</div><div style="font-size:12px;font-weight:800;color:#FFD700">SECRET DROP</div><div style="font-size:9px;color:#8DA2C3;margin-top:4px">Password: KAVIYA2026</div><input id="secretInput" placeholder="Enter code" style="width:80%;margin-top:8px;padding:6px;border-radius:100px;border:1px solid #FFD700;background:#000;color:#FFD700;text-align:center;font-size:11px"><button onclick="checkSecret()" style="width:100%;margin-top:6px;background:#000;color:#FFD700;border:1px solid #FFD700;padding:6px;border-radius:100px;font-weight:900;font-size:10px">UNLOCK</button></div>
+</div>
+
+<!-- SECRET PRODUCTS HIDDEN -->
+<div id="secretBox" style="display:none;margin-top:16px;background:linear-gradient(90deg,#FFD700,#FFA500);border-radius:16px;padding:16px;color:#000;text-align:center"><div style="font-weight:900;font-size:16px">🔓 SECRET DROP UNLOCKED! 👑</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px"><div style="background:#000;color:#FFD700;border-radius:10px;padding:10px">👑 Gold Crown Tee - Rs.3500</div><div style="background:#000;color:#FFD700;border-radius:10px;padding:10px">💎 Diamond Hoodie - Rs.6500</div></div></div>
+
+<!-- SPONSORS -->
+<div style="margin-top:20px;background:rgba(0,0,0,0.5);border:1px solid rgba(255,215,0,0.15);border-radius:16px;padding:14px"><div style="display:flex;justify-content:space-between"><span style="color:#FFD700;font-weight:900;font-size:12px">🤝 SPONSORS AUTO ROTATE</span><span style="color:#8DA2C3;font-size:9px">Powered by generosity</span></div><div style="display:flex;gap:8px;margin-top:10px;animation:scroll 20s linear infinite"><div style="min-width:90px;height:40px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#000;font-weight:800;font-size:9px">LOGO 1</div><div style="min-width:90px;height:40px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#000;font-weight:800;font-size:9px">LOGO 2</div><div style="min-width:90px;height:40px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#000;font-weight:800;font-size:9px">LOGO 3</div><div style="min-width:90px;height:40px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#000;font-weight:800;font-size:9px">LOGO 1</div></div></div>
+</div>
+
+<!-- SPIN WHEEL MODAL -->
+<div id="spinModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:999;align-items:center;justify-content:center;padding:20px">
+<div style="background:#0A1931;border:2px solid #FFD700;border-radius:20px;padding:24px;max-width:320px;width:100%;text-align:center;position:relative">
+<div onclick="document.getElementById('spinModal').style.display='none'" style="position:absolute;top:10px;right:14px;cursor:pointer;color:#fff;font-size:20px">✕</div>
+<div style="font-size:50px">🎡</div><div style="color:#FFD700;font-weight:900;font-size:18px;margin-top:8px">SPIN & WIN 20% OFF!</div>
+<div id="wheel" style="width:180px;height:180px;margin:16px auto;background:conic-gradient(#FFD700 0deg 90deg,#000 90deg 180deg,#FFA500 180deg 270deg,#C0C0C0 270deg 360deg);border-radius:50%;border:4px solid #FFD700;display:flex;align-items:center;justify-content:center;transition:3s">🎯</div>
+<button onclick="spin()" style="background:linear-gradient(90deg,#FFD700,#FFA500);border:none;padding:12px 24px;border-radius:100px;font-weight:900;width:100%">SPIN NOW!</button>
+<div id="winMsg" style="display:none;margin-top:12px;background:#25D366;color:#fff;padding:10px;border-radius:10px;font-weight:900">🎉 YOU WON 20% OFF! Code: GOLD20</div>
+</div>
+</div>
+
+<style>
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes marquee{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+.tilt:hover{transform:perspective(600px) rotateY(12deg) rotateX(6deg) scale(1.05);box-shadow:0 20px 40px rgba(255,215,0,0.4);border-color:#FFD700!important}
+#wheel.spin{transform:rotate(1440deg)}
+</style>
+
+<script>
+let cart=0;function addCart(){cart++;document.getElementById('cartCount').innerText=cart;alert('🛒 Cart eke add una! Total: '+cart)}
+function checkSecret(){if(document.getElementById('secretInput').value.toUpperCase()=='KAVIYA2026'){document.getElementById('secretBox').style.display='block';alert('🔓 SECRET UNLOCKED!')}else{alert('❌ Wrong code! Hint: KAVIYA2026')}}
+function spin(){document.getElementById('wheel').classList.add('spin');setTimeout(()=>{document.getElementById('winMsg').style.display='block'},3000)}
+setInterval(()=>{let n=Math.floor(Math.random()*8)+11;document.getElementById('liveCount').innerText=n+' VIEWING'},3000);
+</script>
+</body></html>

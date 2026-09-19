@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEO ROYAL - Our Members</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Outfit}
+body{background:#070709;color:#fff;min-height:100vh}
+.nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(7,7,9,0.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.back-btn{display:flex;align-items:center;gap:8px;background:#fff;color:#000;padding:10px 18px;border-radius:100px;font-weight:800;font-size:13px;text-decoration:none;transition:0.3s}
+.back-btn:hover{background:#FFD700;transform:scale(1.05)}
+.hero{padding:110px 20px 30px;text-align:center}
+.card{background:linear-gradient(145deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03));backdrop-filter:blur(30px);border:1px solid rgba(255,255,255,0.08);border-radius:24px;padding:22px;position:relative;overflow:hidden;transition:0.4s}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,215,0,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.5)}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,215,0,0.5),transparent)}
+.num{position:absolute;top:14px;right:14px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);padding:4px 10px;border-radius:100px;font-size:10px;font-weight:700;opacity:0.6}
+.avatar{width:58px;height:58px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;box-shadow:0 8px 20px rgba(0,0,0,0.3)}
+.syne{font-family:Syne}
+</style>
+</head><body>
+
+<div class="nav">
+<a href="index.html" class="back-btn">← BACK TO HOME</a>
+<div style="display:flex;align-items:center;gap:10px"><div style="width:36px;height:36px;background:linear-gradient(135deg,#FFD700,#FF8C00);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#000;font-weight:900">L</div><div><div style="font-weight:900;font-size:13px;letter-spacing:-0.3px">LEO ROYAL</div><div style="font-size:8px;opacity:0.4;letter-spacing:2px">PRIVATE CIRCLE</div></div></div>
+<div style="background:#FFD700;color:#000;padding:8px 14px;border-radius:100px;font-size:11px;font-weight:900">👑 <span id="total">5</span> MEMBERS</div>
+</div>
+
+<div class="hero">
+<h1 class="syne" style="font-size:64px;font-weight:800;line-height:0.9;letter-spacing:-2px">OUR<br><span style="color:#FFD700">MEMBER</span></h1>
+<p style="opacity:0.4;font-size:13px;margin-top:12px;letter-spacing:1px">MEMBERSHIP BUY KARAPU LEGENDS • VERIFIED ONLY</p>
+<div style="width:50px;height:3px;background:#FFD700;margin:16px auto;border-radius:100px"></div>
+</div>
+
+<div style="max-width:1200px;margin:0 auto;padding:0 16px 60px">
+<div id="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px"></div>
+</div>
+
+<div style="text-align:center;padding:20px;opacity:0.2;font-size:10px;letter-spacing:2px">© 2026 LEO ROYAL • PRIVATE MEMBERS ONLY</div>
+
+<script>
+// 👇👇 මෙතන තමයි නම් ටික දාන්නේ - ඔයාට Edit කරන්න පුළුවන් 👇👇
+let members = [
+ { name: "", id: "", date: "", emoji: "", color: "", status: "" },
+   { name: "", id: "", date: "", emoji: "", color: "", status: "" },
+ { name: "", id: "", date: "", emoji: "", color: "", status: "" },
+ { name: "", id: "", date: "", emoji: "", color: "", status: "" },
+ { name: "", id: "", date: "", emoji: "", color: "", status: "" },
+   // අලුත් කෙනෙක් add කරන්න නම් මේ line එක copy කරලා දාන්න
+  // { name: "Aluth Nama", id: "LEO-006", date: "2026-09-20", emoji: "💎", color: "#FFD700", status: "MEMBER" },
+];
+// 👆👆 මෙතනින් උඩ විතරක් Edit කරන්න 👆👆
+
+function render(){
+let g=document.getElementById('grid');g.innerHTML="";
+members.forEach((m,i)=>{
+g.innerHTML+=`<div class="card">
+<div class="num">#${m.id}</div>
+<div style="display:flex;gap:14px;align-items:center;margin-top:6px">
+<div class="avatar" style="background:linear-gradient(135deg,${m.color},${m.color}88);border:2px solid ${m.color}55">${m.emoji}</div>
+<div>
+<div style="display:flex;gap:6px;align-items:center"><span style="background:${m.color};color:#000;padding:3px 9px;border-radius:100px;font-size:9px;font-weight:900">${m.status}</span><span style="font-size:10px;opacity:0.4">• ${m.date}</span></div>
+<div style="font-weight:800;font-size:17px;margin-top:6px;letter-spacing:-0.3px">${m.name}</div>
+<div style="font-size:11px;opacity:0.4;margin-top:2px">Verified Member • ${m.id}</div>
+</div>
+</div>
+<div style="margin-top:18px;display:flex;align-items:center;gap:8px">
+<div style="flex:1;height:1px;background:linear-gradient(90deg,${m.color}66,transparent)"></div>
+<span style="font-size:10px;opacity:0.3">✓ MEMBERSHIP ACTIVE</span>
+</div>
+</div>`;
+});
+document.getElementById('total').innerText=members.length;
+}
+render();
+</script>
+</body></html>

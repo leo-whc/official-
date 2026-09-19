@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - LEO CLUB</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0A1931;color:#fff;font-family:'Outfit',sans-serif}
+nav{display:flex;justify-content:space-between;align-items:center;padding:12px 40px;background:#0A1F44;border-bottom:1.5px solid #C9A86A;position:sticky;top:0;z-index:99}
+.nav-left{display:flex;align-items:center;gap:12px}
+.nav-left img{width:68px;height:68px; border-radius: 50%; object-fit:contain}
+.nav-left span{font-family:'Playfair Display';color:#C9A86A;letter-spacing:2px;font-weight:700;font-size:14px}.back{border:1px solid #C9A86A;color:#E6C875;padding:9px 18px;border-radius:100px;background:rgba(255,255,255,0.06);font-weight:700;font-size:12px;cursor:pointer}
+.back:hover{background:#FFD700;color:#0A1931}
+.team-card{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,106,0.25);border-radius:20px;padding:22px;text-align:center;transition:0.3s;position:relative;overflow:hidden}
+.team-card:hover{transform:translateY(-6px);border-color:#FFD700;box-shadow:0 15px 40px rgba(201,168,106,0.2)}
+.avatar{width:80px;height:80px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:36px;border:3px solid #FFD700;box-shadow:0 6px 20px rgba(255,215,0,0.3)}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+  
+    <img src="nav_img.png" alt="LEO CLUB LOGO">
+    <div style="color:#C9A86A;font-weight:900;letter-spacing:2px;font-family:'Playfair Display'">LEO CLUB</div>
+</div>
+  <div style="display:flex;gap:10px">
+    <button class="back" onclick="goHome()">← Back to Home</button>
+    <button style="background:#FFD700;color:#0A1931;padding:9px 18px;border-radius:100px;border:none;font-weight:900;font-size:12px">Contact</button>
+  </div>
+</nav>
+
+<div style="text-align:center;padding:50px 20px 30px;background:radial-gradient(800px at 50% 0%, rgba(201,168,106,0.2), transparent), linear-gradient(180deg,#0D244A,#0A1F44)">
+  <div style="display:inline-block;background:linear-gradient(90deg,#E6C875,#C9A86A);color:#0A1F44;padding:6px 18px;border-radius:100px;font-size:10px;font-weight:900;letter-spacing:3px">OUR TEAM</div>
+  <h1 style="font-family:'Playfair Display';font-size:44px;color:#E6C875;margin-top:14px">Contact Our Team</h1>
+  <p style="color:#8DA2C3;font-size:13px;margin-top:8px">Meet our dedicated leaders - ready to help you join the pride!</p>
+</div>
+
+<div style="max-width:1100px;margin:0 auto;padding:30px">
+
+  <!-- LEADERSHIP TEAM - 1,2,3 PLACE -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+
+    <!-- PRESIDENT - 1ST PLACE GOLD -->
+    <div class="team-card" style="border:2px solid #FFD700;background:linear-gradient(180deg,rgba(255,215,0,0.12),rgba(255,215,0,0.02));transform:scale(1.05)">
+      <div style="position:absolute;top:10px;right:10px;background:#FFD700;color:#000;padding:3px 10px;border-radius:100px;font-size:9px;font-weight:900">🥇 PRESIDENT</div>
+      <div class="avatar" style="background:linear-gradient(135deg,#FFD700,#FFA500);margin-top:10px">👑</div>
+      <h3 style="color:#FFD700;margin-top:14px;font-size:18px">Leo [Your Name]</h3>
+      <div style="color:#fff;font-size:11px;font-weight:800;letter-spacing:1px;margin-top:2px">CLUB PRESIDENT - 1ST PLACE</div>
+      <div style="margin-top:14px;background:rgba(0,0,0,0.3);border-radius:12px;padding:12px;text-align:left">
+        <div style="display:flex;align-items:center;gap:8px;margin-top:6px"><span style="color:#FFD700">📞</span><a href="tel:+947XXXXXXXX" style="color:#C5D1E8;font-size:12px;text-decoration:none">+94 7X XXX XXXX</a></div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px"><span style="color:#FFD700">✉️</span><a href="mailto:president@leoclub.lk" style="color:#C5D1E8;font-size:12px;text-decoration:none">president@leoclub.lk</a></div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px"><span style="color:#FFD700">📍</span><span style="color:#8DA2C3;font-size:11px">Colombo, Sri Lanka</span></div>
+      </div>
+      <button style="width:100%;margin-top:12px;background:linear-gradient(90deg,#FFD700,#FFC400);color:#000;padding:10px;border-radius:100px;border:none;font-weight:800;font-size:11px;cursor:pointer">📞 Contact President</button>
+    </div>
+
+    <!-- VICE PRESIDENT - 2ND PLACE SILVER -->
+    <div class="team-card" style="border:1.5px solid rgba(192,192,192,0.5)">
+
+      <div style="position:absolute;top:10px;right:10px;background:rgba(192,192,192,0.2);color:#C0C0C0;padding:3px 10px;border-radius:100px;font-size:9px;font-weight:900;border:1px solid #C0C0C0">🥈 VICE PRESIDENT</div><br>
+            <div class="avatar" style="background:linear-gradient(135deg,#C0C0C0,#A0A0A0);border-color:#C0C0C0">⭐</div>
+      <h3 style="color:#C0C0C0;margin-top:14px;font-size:18px">Leo [Name]</h3>
+      <div style="color:#fff;font-size:11px;font-weight:800;letter-spacing:1px;margin-top:2px">VICE PRESIDENT - 2ND PLACE</div>
+      <div style="margin-top:14px;background:rgba(0,0,0,0.3);border-radius:12px;padding:12px;text-align:left">
+        <div style="display:flex;align-items:center;gap:8px"><span style="color:#C0C0C0">📞</span><a href="tel:+947XXXXXXXX" style="color:#C5D1E8;font-size:12px;text-decoration:none">+94 7X XXX XXXX</a></div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px"><span style="color:#C0C0C0">✉️</span><a href="mailto:vp@leoclub.lk" style="color:#C5D1E8;font-size:12px;text-decoration:none">vp@leoclub.lk</a></div>
+      </div>
+      <button style="width:100%;margin-top:12px;background:transparent;border:1.5px solid #C0C0C0;color:#C0C0C0;padding:10px;border-radius:100px;font-weight:800;font-size:11px;cursor:pointer">📞 Contact VP</button>
+    </div>
+
+    <!-- SECRETARY - 3RD PLACE BRONZE -->
+    <div class="team-card" style="border:1.5px solid rgba(205,127,50,0.5)">
+      <div style="position:absolute;top:10px;right:10px;background:rgba(205,127,50,0.2);color:#CD7F32;padding:3px 10px;border-radius:100px;font-size:9px;font-weight:900;border:1px solid #CD7F32">🥉 SECRETARY</div><br>
+      <div class="avatar" style="background:linear-gradient(135deg,#CD7F32,#A65C1A);border-color:#CD7F32">📝</div>
+      <h3 style="color:#CD7F32;margin-top:14px;font-size:18px">Leo [Name]</h3>
+      <div style="color:#fff;font-size:11px;font-weight:800;letter-spacing:1px;margin-top:2px">SECRETARY - 3RD PLACE</div>
+      <div style="margin-top:14px;background:rgba(0,0,0,0.3);border-radius:12px;padding:12px;text-align:left">
+        <div style="display:flex;align-items:center;gap:8px"><span style="color:#CD7F32">📞</span><a href="tel:+947XXXXXXXX" style="color:#C5D1E8;font-size:12px;text-decoration:none">+94 7X XXX XXXX</a></div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px"><span style="color:#CD7F32">✉️</span><a href="mailto:secretary@leoclub.lk" style="color:#C5D1E8;font-size:12px;text-decoration:none">secretary@leoclub.lk</a></div>
+      </div>
+      <button style="width:100%;margin-top:12px;background:transparent;border:1.5px solid #CD7F32;color:#CD7F32;padding:10px;border-radius:100px;font-weight:800;font-size:11px;cursor:pointer">📞 Contact Secretary</button>
+    </div>
+
+    <!-- TREASURER -->
+    <div class="team-card">
+      <div class="avatar" style="background:linear-gradient(135deg,#22C55E,#15803D);border-color:#22C55E">💰</div>
+      <h3 style="color:#22C55E;margin-top:14px;font-size:16px">DINETHMA SEMINDI</h3>
+      <div style="color:#8DA2C3;font-size:10px;font-weight:700;margin-top:2px">TREASURER</div>
+      <div style="margin-top:12px;background:rgba(0,0,0,0.3);border-radius:12px;padding:10px;text-align:left">
+        <div style="display:flex;gap:8px"><span>📞</span><span style="color:#C5D1E8;font-size:11px">+94 7X XXX XXXX (Contact to click here ⇩)</span></div>
+        <div style="display:flex;gap:8px;margin-top:6px"><span>✉️</span><span style="color:#C5D1E8;font-size:11px">dinez28430@gmail.com</span></div>
+      </div>
+           <a href="https://wa.me/0703426300?text=LEO CLUB TREASURER - " > <button style="width:100%;margin-top:12px;background:transparent;border:1.5px solid #CD7F32;color:#CD7F32;padding:10px;border-radius:100px;font-weight:800;font-size:11px;cursor:pointer">📞 Contact TREASURER</button></a>
+
+    </div>
+
+    <!-- Ass.TREASURER -->
+    <div class="team-card">
+      <div class="avatar" style="background:linear-gradient(135deg,#22C55E,#15803D);border-color:#22C55E">💰</div>
+      <h3 style="color:#22C55E;margin-top:14px;font-size:16px">VIDEW DINTHARU</h3>
+      <div style="color:#8DA2C3;font-size:10px;font-weight:700;margin-top:2px">Ass.TREASURER</div>
+      <div style="margin-top:12px;background:rgba(0,0,0,0.3);border-radius:12px;padding:10px;text-align:left">
+        <div style="display:flex;gap:8px"><span>📞</span><span style="color:#C5D1E8;font-size:11px">+94 7X XXX XXXX (Contact to click here ⇩)</span></div>
+        <div style="display:flex;gap:8px;margin-top:6px"><span>✉️</span><span style="color:#C5D1E8;font-size:11px">mvd100322@gmail.com</span></div>
+      </div>
+           <a href="https://wa.me/0715616736?text=LEO CLUB Ass.TREASURER - " > <button style="width:100%;margin-top:12px;background:transparent;border:1.5px solid #CD7F32;color:#CD7F32;padding:10px;border-radius:100px;font-weight:800;font-size:11px;cursor:pointer">📞 Contact TREASURER</button></a>
+
+    </div>
+
+
+    <!-- PROJECT CHAIR -->
+    <div class="team-card">
+      <div class="avatar" style="background:linear-gradient(135deg,#3B82F6,#1D4ED8);border-color:#3B82F6">🎯</div>
+      <h3 style="color:#3B82F6;margin-top:14px;font-size:16px">Leo [Name]</h3>
+      <div style="color:#8DA2C3;font-size:10px;font-weight:700;margin-top:2px">PROJECT CHAIR</div>
+      <div style="margin-top:12px;background:rgba(0,0,0,0.3);border-radius:12px;padding:10px;text-align:left">
+        <div style="display:flex;gap:8px"><span>📞</span><span style="color:#C5D1E8;font-size:11px">+94 7X XXX XXXX</span></div>
+        <div style="display:flex;gap:8px;margin-top:6px"><span>✉️</span><span style="color:#C5D1E8;font-size:11px">projects@leoclub.lk</span></div>
+      </div>
+            <button style="width:100%;margin-top:12px;background:transparent;border:1.5px solid #CD7F32;color:#CD7F32;padding:10px;border-radius:100px;font-weight:800;font-size:11px;cursor:pointer">📞 Contact Secretary</button>
+
+    </div>
+
+    <!-- MEMBERSHIP CHAIR -->
+    <div class="team-card">
+      <div class="avatar" style="background:linear-gradient(135deg,#A855F7,#7E22CE);border-color:#A855F7">👥</div>
+      <h3 style="color:#A855F7;margin-top:14px;font-size:16px">DEWMINI RAMESHIKA </h3>
+      <div style="color:#8DA2C3;font-size:10px;font-weight:700;margin-top:2px">MEMBERSHIP DIRECTOR</div>
+      <div style="margin-top:12px;background:rgba(0,0,0,0.3);border-radius:12px;padding:10px;text-align:left">
+        <div style="display:flex;gap:8px"><span>📞</span><span style="color:#C5D1E8;font-size:11px">+94 7X XXX XXXX (Contact to click here ⇩ )</span></div>
+        <div style="display:flex;gap:8px;margin-top:6px"><span>✉️</span><span style="color:#C5D1E8;font-size:11px">dewminirameshika6@gmail.com</span></div>
+      </div>
+            <a href="https://wa.me/0720803118?text=LEO CLUB MEMBERSHIP DIRECTOR - " > <button style="width:100%;margin-top:12px;background:transparent;border:1.5px solid #CD7F32;color:#CD7F32;padding:10px;border-radius:100px;font-weight:800;font-size:11px;cursor:pointer">📞 Contact MEMBERSHIP DIRECTOR</button></a>
+
+    </div>
+
+    <!--MEADIA DiRECTOR-->
+     <div class="team-card">
+      <div class="avatar" style="background:linear-gradient(135deg,#3B82F6,#1D4ED8);border-color:#3B82F6">💻</div>
+      <h3 style="color:#3B82F6;margin-top:14px;font-size:16px">KAWEED BINUDITHA</h3>
+      <div style="color:#8DA2C3;font-size:10px;font-weight:700;margin-top:2px">MEADIA DIRECTOR</div>
+      <div style="margin-top:12px;background:rgba(0,0,0,0.3);border-radius:12px;padding:10px;text-align:left">
+        <div style="display:flex;gap:8px"><span>📞</span><span style="color:#C5D1E8;font-size:11px">+94 7X XXX XXXX</span></div>
+        <div style="display:flex;gap:8px;margin-top:6px"><span>✉️</span><span style="color:#C5D1E8;font-size:11px">kaweedbinuditha1@gmail.com</span></div>
+                <div style="display:flex;gap:8px;margin-top:6px"><span>⭕</span><span style="color:#C5D1E8;font-size:11px">SITE OWNER</span></div>
+                <div style="display:flex;gap:8px;margin-top:6px"><span>⭕</span><span style="color:#C5D1E8;font-size:11px">SITE DEVERLOPER</span></div>
+
+      </div>
+            <a href="https://wa.me/0773053603?text=LEO CLUB MEADIA DIRECTOR -   " > <button style="width:100%;margin-top:12px;background:transparent;border:1.5px solid #CD7F32;color:#CD7F32;padding:10px;border-radius:100px;font-weight:800;font-size:11px;cursor:pointer">📞 Contact MEADIA DERECTOR</button></a>
+
+    </div>
+
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div style="margin-top:30px;background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,106,0.25);border-radius:20px;padding:24px;max-width:600px;margin-left:auto;margin-right:auto">
+    <h3 style="color:#E6C875;text-align:center">💬 Send Message to Team</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">
+      <input placeholder="Your Name" style="background:rgba(0,0,0,0.3);border:1px solid rgba(201,168,106,0.2);border-radius:10px;padding:12px;color:#fff;font-size:12px">
+      <input placeholder="Your Email" style="background:rgba(0,0,0,0.3);border:1px solid rgba(201,168,106,0.2);border-radius:10px;padding:12px;color:#fff;font-size:12px">
+    </div>
+    <textarea placeholder="Your Message..." rows="4" style="width:100%;margin-top:12px;background:rgba(0,0,0,0.3);border:1px solid rgba(201,168,106,0.2);border-radius:10px;padding:12px;color:#fff;font-size:12px;resize:none"></textarea>
+    <button style="width:100%;margin-top:12px;background:linear-gradient(90deg,#FFD700,#FFC400);color:#000;padding:12px;border-radius:100px;border:none;font-weight:900;cursor:pointer">Send Message →</button>
+  </div>
+
+  <div style="text-align:center;margin-top:36px">
+    <button onclick="goHome()" style="background:linear-gradient(90deg,#FFD700,#FFC400);color:#0A1931;padding:14px 36px;border-radius:100px;border:none;font-weight:900;cursor:pointer;box-shadow:0 8px 25px rgba(255,215,0,0.4)">🏠 Back to Home</button>
+  </div>
+
+</div>
+
+<script>function goHome(){window.location.href="index.html";}</script>
+</body>
+</html>
