@@ -1,9 +1,10 @@
+<!---=======================meka index.html eke update karanna hadhapu eka========================-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LEO CLUB | WHC</title>
+<title>LEO CLUB | Official Homepage</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -116,6 +117,90 @@ nav{min-height:76px;padding:10px 16px;gap:10px}
   #sponsors h2{font-size:23px!important}
   #sponsors [style*="min-width:160px"]{min-width:135px!important}
 }
+
+/* ===== PREMIUM SPONSOR EXPERIENCE ===== */
+.sponsor-card{
+  cursor:pointer;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;
+  overflow:hidden;
+}
+.sponsor-card:hover{transform:translateY(-8px) scale(1.015);box-shadow:0 18px 45px rgba(255,215,0,.18);border-color:#fff!important}
+.sponsor-logo{width:78px!important;height:78px!important;object-fit:contain!important;padding:6px;background:#fff;border-radius:16px;margin:0 auto;box-shadow:0 8px 25px rgba(0,0,0,.25)}
+.sponsor-card .tap{font-size:9px;color:#8DA2C3;margin-top:8px}
+.sponsor-modal{position:fixed;inset:0;background:rgba(2,8,20,.82);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:18px;z-index:9999}
+.sponsor-modal.show{display:flex;animation:fadeIn .25s ease}
+.sponsor-dialog{width:min(560px,100%);background:linear-gradient(145deg,#10284f,#07152e);border:1px solid rgba(255,215,0,.55);border-radius:26px;box-shadow:0 30px 90px rgba(0,0,0,.6);padding:26px;position:relative;animation:popIn .3s ease}
+.sponsor-close{position:absolute;right:14px;top:12px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,215,0,.35);background:rgba(255,255,255,.05);color:#FFD700;font-size:20px;cursor:pointer}
+.sponsor-dialog-head{text-align:center;padding:8px 20px 18px}
+.sponsor-dialog-logo{width:100px;height:100px;object-fit:contain;background:#fff;border-radius:22px;padding:8px;box-shadow:0 0 35px rgba(255,215,0,.18)}
+.sponsor-dialog h3{font-family:'Playfair Display';font-size:27px;color:#fff;margin-top:14px}
+.sponsor-badge{display:inline-block;margin-top:8px;padding:5px 12px;border-radius:99px;background:#FFD700;color:#111;font-size:10px;font-weight:900;letter-spacing:1px}
+.sponsor-details{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.sponsor-detail{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:13px}
+.sponsor-detail b{display:block;color:#FFD700;font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.sponsor-detail span{color:#dce5f5;font-size:12px;line-height:1.45}
+.sponsor-note{margin-top:14px;padding:14px;border-left:3px solid #FFD700;background:rgba(255,215,0,.06);border-radius:10px;color:#b9c7dc;font-size:12px;line-height:1.55}
+.sponsor-actions{display:flex;gap:10px;margin-top:16px}
+.sponsor-actions button{flex:1;border:0;border-radius:12px;padding:12px;font-weight:800;cursor:pointer}
+.sponsor-wa{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff}
+.sponsor-done{background:rgba(255,255,255,.08);color:#FFD700;border:1px solid rgba(255,215,0,.3)!important}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes popIn{from{opacity:0;transform:translateY(15px) scale(.96)}to{opacity:1;transform:none}}
+@media(max-width:560px){
+ .sponsor-dialog{padding:20px;border-radius:20px}
+ .sponsor-details{grid-template-columns:1fr}
+ .sponsor-dialog h3{font-size:23px}
+}
+
+
+/* ===== ULTIMATE PREMIUM SPONSOR SHOWCASE ===== */
+#sponsors{position:relative;background:
+ radial-gradient(circle at 15% 20%,rgba(255,215,0,.10),transparent 28%),
+ radial-gradient(circle at 85% 70%,rgba(0,180,255,.07),transparent 30%),
+ linear-gradient(135deg,#050d1d 0%,#0b1932 48%,#071426 100%)!important}
+#sponsors:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.035) 50%,transparent 80%);animation:sponsorShine 7s linear infinite}
+.sponsor-section-wrap{position:relative;z-index:2}
+.sponsor-hero-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid rgba(255,215,0,.55);border-radius:999px;background:rgba(255,215,0,.08);box-shadow:0 0 25px rgba(255,215,0,.10)}
+.sponsor-title{font-size:clamp(28px,5vw,42px)!important;letter-spacing:-.5px;text-shadow:0 0 25px rgba(255,215,0,.12)}
+.sponsor-title span{background:linear-gradient(90deg,#fff,#FFD700,#fff);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:titleGold 3s linear infinite}
+.sponsor-subtitle{max-width:650px;margin:9px auto 0!important;font-size:13px!important;line-height:1.6;color:#9fb0ca!important}
+.sponsor-level-head{padding:10px 14px;border-radius:14px;background:linear-gradient(90deg,rgba(255,215,0,.08),transparent);border:1px solid rgba(255,215,0,.12)}
+.sponsor-card{min-height:205px!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;position:relative!important}
+.sponsor-card:after{content:"";position:absolute;inset:1px;border-radius:15px;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.10),transparent 35%,rgba(255,215,0,.07));opacity:.7}
+.sponsor-card .sponsor-logo,.sponsor-card .sponsor-logo~*{position:relative;z-index:2}
+.sponsor-card .sponsor-logo{transition:transform .35s ease,filter .35s ease;box-shadow:0 10px 30px rgba(0,0,0,.28)}
+.sponsor-card:hover .sponsor-logo{transform:scale(1.08) rotate(-2deg);filter:drop-shadow(0 0 15px rgba(255,215,0,.35))}
+.sponsor-featured{box-shadow:0 0 0 1px rgba(255,215,0,.18),0 20px 55px rgba(255,215,0,.12)!important}
+.sponsor-crown{position:absolute;left:14px;top:12px;font-size:18px;animation:crownFloat 2.2s ease-in-out infinite;z-index:3}
+.sponsor-click-label{margin-top:8px;color:#91a4c2;font-size:9px;letter-spacing:.6px}
+.sponsor-scroll-shell{box-shadow:inset 20px 0 25px -25px #000,inset -20px 0 25px -25px #000}
+.sponsor-mini{transition:.3s ease;cursor:pointer;position:relative}
+.sponsor-mini:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(255,255,255,.10)}
+.sponsor-chip{transition:.25s ease;cursor:pointer}
+.sponsor-chip:hover{transform:translateY(-2px);background:rgba(205,127,50,.13)!important;border-color:#CD7F32!important;color:#fff!important}
+.sponsor-cta{position:relative;overflow:hidden!important;box-shadow:0 18px 45px rgba(255,165,0,.15)}
+.sponsor-cta:before{content:"";position:absolute;top:-60%;left:-30%;width:25%;height:220%;background:rgba(255,255,255,.32);transform:rotate(22deg);animation:ctaSweep 4s ease-in-out infinite}
+.sponsor-cta>*{position:relative;z-index:2}
+.sponsor-cta button{transition:.25s ease}
+.sponsor-cta button:hover{transform:scale(1.04);box-shadow:0 8px 25px rgba(0,0,0,.3)}
+.sponsor-modal{background:rgba(1,5,15,.88)!important}
+.sponsor-dialog{background:
+ radial-gradient(circle at 50% 0%,rgba(255,215,0,.12),transparent 30%),
+ linear-gradient(145deg,#122b55,#050e1e)!important;
+ border:1px solid rgba(255,215,0,.55)!important}
+.sponsor-dialog:before{content:"";position:absolute;inset:1px;border-radius:25px;border:1px solid rgba(255,255,255,.05);pointer-events:none}
+.sponsor-dialog-logo{box-shadow:0 0 45px rgba(255,215,0,.22)!important}
+.sponsor-detail{transition:.25s ease}
+.sponsor-detail:hover{transform:translateY(-2px);background:rgba(255,215,0,.07)}
+@keyframes sponsorShine{0%{transform:translateX(-30%)}100%{transform:translateX(30%)}}
+@keyframes titleGold{to{background-position:200% center}}
+@keyframes crownFloat{50%{transform:translateY(-4px) rotate(3deg)}}
+@keyframes ctaSweep{0%,55%{left:-35%}100%{left:125%}}
+@media(max-width:600px){
+ .sponsor-card{min-height:190px!important}
+ .sponsor-title{line-height:1.05!important}
+ .sponsor-cta{padding:18px!important}
+}
+
 </style>
 </head>
 <body>
@@ -182,32 +267,36 @@ nav{min-height:76px;padding:10px 16px;gap:10px}
 
 <!-- TITLE -->
 <div style="text-align:center;margin-bottom:24px">
-<div style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,215,0,0.1);border:1px solid #FFD700;padding:8px 18px;border-radius:100px">
+<div class="sponsor-hero-badge">
 <span style="color:#FFD700;font-weight:900;font-size:12px;letter-spacing:1px">🤝 OUR PROUD PARTNERS</span>
 </div>
-<h2 style="font-family:'Playfair Display',serif;color:#fff;font-size:28px;font-weight:900;margin-top:12px">Powered by <span style="background:linear-gradient(90deg,#FFD700,#FFA500);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Generosity</span></h2>
-<p style="color:#8DA2C3;font-size:12px;margin-top:6px">Sponsors la nisa thama ape service projects karanna puluwan</p>
+<h2 class="sponsor-title" style="font-family:'Playfair Display',serif;color:#fff;font-weight:900;margin-top:14px">Powered by <span>Generosity</span></h2>
+<p class="sponsor-subtitle">Every partnership helps us turn youth leadership into real community impact. Thank you for standing with Leo Club.</p>
 </div>
 
 <!-- GOLD SPONSORS -->
-<div style="margin-bottom:20px">
-<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+<div class="sponsor-section-wrap" style="margin-bottom:20px">
+<div class="sponsor-level-head" style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
 <div style="width:28px;height:28px;background:linear-gradient(135deg,#FFD700,#FFA500);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px">👑</div>
 <span style="color:#FFD700;font-weight:900;font-size:13px;letter-spacing:1px">GOLD SPONSORS</span>
 <span style="background:#FFD700;color:#000;padding:2px 8px;border-radius:100px;font-size:9px;font-weight:900">Rs.500+</span>
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
-<div style="background:linear-gradient(145deg,rgba(255,215,0,0.15),rgba(255,215,0,0.05));border:2px solid #FFD700;border-radius:16px;padding:18px;text-align:center;position:relative">
+<div class="sponsor-card sponsor-featured" onclick="openSponsor('Main Sponsor','GOLD','Screenshot_20260916_224438_WhatsApp.jpg','Main Sponsor','Proudly supporting Leo Club service projects and youth leadership.','Tap to view sponsor details.')"
+style="background:linear-gradient(145deg,rgba(255,215,0,0.18),rgba(255,215,0,0.04));border:2px solid #FFD700;border-radius:16px;padding:18px;text-align:center;position:relative"><div class="sponsor-crown">👑</div>
 <div style="position:absolute;top:8px;right:8px;background:#FFD700;color:#000;padding:2px 6px;border-radius:100px;font-size:8px;font-weight:900">GOLD</div>
-<div ><img style="width:60px;height:60px;background:#fff;border-radius:12px;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:28px" src="Screenshot_20260916_224438_WhatsApp.jpg"> </div>
-<div style="color:#fff;font-weight:800;margin-top:10px;font-size:14px">Company Name</div>
-<div style="color:#C9A86A;font-size:10px">Main Sponsor</div>
+<img class="sponsor-logo" src="Screenshot_20260916_224438_WhatsApp.jpg" alt="Sponsor logo">
+<div style="color:#fff;font-weight:800;margin-top:10px;font-size:14px">Main Sponsor</div>
+<div style="color:#C9A86A;font-size:10px">Gold Partner</div><div class="tap">Click for details →</div>
 </div>
-<div style="background:linear-gradient(145deg,rgba(255,215,0,0.15),rgba(255,215,0,0.05));border:2px solid #FFD700;border-radius:16px;padding:18px;text-align:center;position:relative">
+<div class="sponsor-card" onclick="openSponsor('Gold Partner','GOLD','', 'Gold Partner', 'A premium sponsorship opportunity supporting Leo Club community projects.', 'Interested in becoming a Gold Partner? Contact us for the full partnership package.')"
+style="background:linear-gradient(145deg,rgba(255,215,0,0.15),rgba(255,215,0,0.05));border:2px solid #FFD700;border-radius:16px;padding:18px;text-align:center;position:relative">
 <div style="position:absolute;top:8px;right:8px;background:#FFD700;color:#000;padding:2px 6px;border-radius:100px;font-size:8px;font-weight:900">GOLD</div>
-<div style="width:60px;height:60px;background:#fff;border-radius:12px;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:28px">🏦</div>
-<div style="color:#fff;font-weight:800;margin-top:10px;font-size:14px">Your Logo Here</div>
-<div style="color:#C9A86A;font-size:10px">Gold Partner - Rs.500</div>
+<!----===========add logo=========-->
+<img class="sponsor-logo" src="Screenshot_20260916_224438_WhatsApp.jpg" alt="Sponsor logo">
+
+<div style="color:#fff;font-weight:800;margin-top:10px;font-size:14px">Gold Partner</div>
+<div style="color:#C9A86A;font-size:10px">Rs.500+ Partnership</div><div class="tap">Click for details →</div>
 </div>
 <div style="background:linear-gradient(145deg,rgba(255,215,0,0.08),rgba(255,215,0,0.02));border:2px dashed #FFD700;border-radius:16px;padding:18px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer" onclick="window.open('https://wa.me/94773053603?text=Hi%20I%20want%20to%20be%20Gold%20Sponsor','_blank')">
 <div style="width:50px;height:50px;border:2px dashed #FFD700;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;color:#FFD700">+</div>
@@ -226,7 +315,7 @@ nav{min-height:76px;padding:10px 16px;gap:10px}
 </div>
 <div style="position:relative;overflow:hidden;background:rgba(255,255,255,0.03);border:1px solid rgba(192,192,192,0.2);border-radius:14px;padding:14px 0">
 <div style="display:flex;gap:14px;animation:scroll 25s linear infinite;white-space:nowrap" id="silverScroll">
-<div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">🏪</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Shop Name</div></div>
+<div class="sponsor-mini" onclick="openSponsor('Shop Name','SILVER','','Silver Sponsor','Rs.250+ Partnership','Thank you for supporting our Leo Club service projects.')" style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">🏪</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Shop Name</div></div>
 <div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">🍔</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Food City</div></div>
 <div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">💇</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Salon Name</div></div>
 <div style="min-width:160px;background:#fff;border-radius:10px;padding:12px;text-align:center"><div style="font-size:20px">📚</div><div style="color:#000;font-weight:700;font-size:11px;margin-top:4px">Book Shop</div></div>
@@ -252,7 +341,7 @@ nav{min-height:76px;padding:10px 16px;gap:10px}
 <span style="background:#CD7F32;color:#fff;padding:2px 8px;border-radius:100px;font-size:9px;font-weight:900">Rs.100+</span>
 </div>
 <div style="display:flex;gap:10px;flex-wrap:wrap">
-<span style="background:rgba(255,255,255,0.06);border:1px solid rgba(205,127,50,0.3);padding:8px 14px;border-radius:100px;font-size:11px;color:#C9A86A">🏪 Local Shop 1</span>
+<span class="sponsor-chip" onclick="openSponsor('Local Shop 1','BRONZE','','Bronze Supporter','Rs.100+ Support','Thank you for helping our community projects.')" style="background:rgba(255,255,255,0.06);border:1px solid rgba(205,127,50,0.3);padding:8px 14px;border-radius:100px;font-size:11px;color:#C9A86A">🏪 Local Shop 1</span>
 <span style="background:rgba(255,255,255,0.06);border:1px solid rgba(205,127,50,0.3);padding:8px 14px;border-radius:100px;font-size:11px;color:#C9A86A">💈 Barber Shop</span>
 <span style="background:rgba(255,255,255,0.06);border:1px solid rgba(205,127,50,0.3);padding:8px 14px;border-radius:100px;font-size:11px;color:#C9A86A">☕ Cafe Name</span>
 <span style="background:rgba(255,255,255,0.06);border:1px solid rgba(205,127,50,0.3);padding:8px 14px;border-radius:100px;font-size:11px;color:#C9A86A">📱 Phone Shop</span>
@@ -261,7 +350,7 @@ nav{min-height:76px;padding:10px 16px;gap:10px}
 </div>
 
 <!-- BECOME SPONSOR CTA -->
-<div style="margin-top:28px;background:linear-gradient(90deg,#FFD700,#FFA500);border-radius:16px;padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+<div class="sponsor-cta" style="margin-top:28px;background:linear-gradient(90deg,#FFD700,#FFA500);border-radius:16px;padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
 <div><div style="color:#000;font-weight:900;font-size:16px">Want to be a Sponsor? 🤝</div><div style="color:rgba(0,0,0,0.7);font-size:11px;margin-top:2px">Support our service projects & get featured here • Tax benefits available</div></div>
 <button onclick="window.open('https://wa.me/94773053603?text=Hi%20A/WHC%20Leos%20Pride%20-%20I%20want%20to%20be%20a%20sponsor','_blank')" style="background:#000;color:#FFD700;border:none;padding:12px 22px;border-radius:100px;font-weight:900;cursor:pointer">💚 WhatsApp Us</button>
 </div>
@@ -274,7 +363,33 @@ nav{min-height:76px;padding:10px 16px;gap:10px}
 </section>
 <!-- ========== END SPONSORS SECTION ========== -->
 
- <div class="footer">LEO CLUB • Official Homepage • In partnership with Lions Clubs International</div>
+ 
+<!-- PREMIUM SPONSOR DETAILS MODAL -->
+<div id="sponsorModal" class="sponsor-modal" onclick="closeSponsor(event)">
+  <div class="sponsor-dialog" onclick="event.stopPropagation()">
+    <button class="sponsor-close" onclick="closeSponsor()">×</button>
+    <div style="height:4px;border-radius:99px;background:linear-gradient(90deg,transparent,#FFD700,transparent);margin-bottom:12px"></div>
+    <div class="sponsor-dialog-head">
+      <img id="modalSponsorLogo" class="sponsor-dialog-logo" style="display:none" alt="Sponsor logo">
+      <div id="modalSponsorIcon" style="font-size:58px;display:none">🤝</div>
+      <h3 id="modalSponsorName">Sponsor</h3>
+      <span id="modalSponsorBadge" class="sponsor-badge">GOLD PARTNER</span>
+    </div>
+    <div class="sponsor-details">
+      <div class="sponsor-detail"><b>Partnership</b><span id="modalSponsorType">Gold Sponsor</span></div>
+      <div class="sponsor-detail"><b>Contribution</b><span id="modalSponsorAmount">Official Partner</span></div>
+      <div class="sponsor-detail"><b>Role</b><span>Supporting Leo Club service & leadership</span></div>
+      <div class="sponsor-detail"><b>Status</b><span>🌟 Proud Community Partner</span></div>
+    </div>
+    <div class="sponsor-note" id="modalSponsorNote">Thank you for supporting our projects.</div>
+    <div class="sponsor-actions">
+      <button class="sponsor-wa" onclick="contactSponsor()">💬 Contact / Sponsor Us</button>
+      <button class="sponsor-done" onclick="closeSponsor()">Close</button>
+    </div>
+  </div>
+</div>
+
+  <div class="footer">LEO CLUB • Official Homepage • In partnership with Lions Clubs International</div>
  
 <div id="about" class="tab" style="padding:40px"><h2>About Leo Club</h2></div>
 <div id="projects" class="tab" style="padding:40px"><h2>Projects</h2></div>
@@ -313,6 +428,33 @@ document.querySelectorAll('.menu a').forEach(a=>{
     if(toggle){toggle.setAttribute('aria-expanded','false');toggle.textContent='☰';}
   });
 });
+
+
+function openSponsor(name,badge,logo,type,amount,note){
+  document.getElementById('modalSponsorName').textContent=name;
+  document.getElementById('modalSponsorBadge').textContent=badge+' PARTNER';
+  document.getElementById('modalSponsorType').textContent=type;
+  document.getElementById('modalSponsorAmount').textContent=amount;
+  document.getElementById('modalSponsorNote').textContent=note;
+  const img=document.getElementById('modalSponsorLogo');
+  const icon=document.getElementById('modalSponsorIcon');
+  if(logo){
+    img.src=logo; img.style.display='block'; icon.style.display='none';
+  }else{
+    img.style.display='none'; icon.style.display='block';
+  }
+  document.getElementById('sponsorModal').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeSponsor(e){
+  if(e && e.target && e.target.id!=='sponsorModal') return;
+  document.getElementById('sponsorModal').classList.remove('show');
+  document.body.style.overflow='';
+}
+function contactSponsor(){
+  window.open('https://wa.me/94773053603?text=Hi%20Leo%20Club%2C%20I%20would%20like%20to%20discuss%20sponsorship.','_blank');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSponsor();});
 
 </script>
 </body>
