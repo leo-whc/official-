@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leo Club | Project Updates</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#07110b;
+    color:#fff;
+    min-height:100vh;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,15,9,.92);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:800;
+    color:#b7ff3c;
+}
+
+.logo span{
+    color:white;
+}
+
+.nav a{
+    color:#ddd;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
+}
+
+.nav a:hover{
+    color:#b7ff3c;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px 60px;
+    background:
+    radial-gradient(circle at top,#284b1d55,transparent 55%);
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid #b7ff3c66;
+    border-radius:50px;
+    color:#b7ff3c;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(40px,7vw,75px);
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#b7ff3c;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    color:#aaa;
+    line-height:1.7;
+}
+
+/* FILTER */
+.filters{
+    max-width:1100px;
+    margin:0 auto 35px;
+    padding:0 20px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.filter-btn{
+    padding:10px 18px;
+    border-radius:30px;
+    border:1px solid #ffffff18;
+    background:#ffffff08;
+    color:#ddd;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:#b7ff3c;
+    color:#07110b;
+    border-color:#b7ff3c;
+}
+
+/* PROJECT GRID */
+.projects{
+    max-width:1100px;
+    margin:auto;
+    padding:0 20px 70px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:linear-gradient(145deg,#102017,#09130d);
+    border:1px solid #ffffff10;
+    border-radius:22px;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:0 15px 40px #0005;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#b7ff3c55;
+    box-shadow:0 20px 50px #0008;
+}
+
+.card-image{
+    height:210px;
+    overflow:hidden;
+    position:relative;
+}
+
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.card:hover .card-image img{
+    transform:scale(1.08);
+}
+
+.status{
+    position:absolute;
+    top:15px;
+    left:15px;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    background:#b7ff3c;
+    color:#07110b;
+}
+
+.card-content{
+    padding:22px;
+}
+
+.date{
+    color:#b7ff3c;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.card h2{
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#aaa;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px solid #ffffff10;
+    color:#bbb;
+    font-size:13px;
+}
+
+.details{
+    display:inline-block;
+    margin-top:18px;
+    color:#b7ff3c;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* EMPTY */
+.empty{
+    display:none;
+    text-align:center;
+    color:#888;
+    grid-column:1/-1;
+    padding:40px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px 20px;
+    border-top:1px solid #ffffff0d;
+    color:#777;
+}
+
+footer strong{
+    color:#b7ff3c;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+    .projects{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .nav{
+        padding:15px;
+    }
+
+    .nav a{
+        display:none;
+    }
+
+    .hero{
+        padding:60px 20px 45px;
+    }
+
+    .projects{
+        grid-template-columns:1fr;
+        padding:0 15px 50px;
+    }
+
+    .card-image{
+        height:220px;
+    }
+
+    
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">🦁 <span>LEO</span> CLUB</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            
+            <a href="projects.html">Projects</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+
+    <div class="badge">🦁 LEO CLUB PROJECTS</div>
+
+    <h1>
+        Our <span>Projects</span>
+    </h1>
+
+    <p>
+        Discover the projects, activities and community service
+        initiatives carried out by our Leo Club members.
+    </p>
+
+</section>
+
+
+<div class="filters">
+
+    <button class="filter-btn active" onclick="filterProjects('all',this)">
+        All
+    </button>
+
+    <button class="filter-btn" onclick="filterProjects('completed',this)">
+        Completed
+    </button>
+
+    <button class="filter-btn" onclick="filterProjects('ongoing',this)">
+        Ongoing
+    </button>
+
+    <button class="filter-btn" onclick="filterProjects('upcoming',this)">
+        Upcoming
+    </button>
+
+</div>
+
+
+<section class="projects" id="projectContainer"></section>
+
+
+<footer>
+    © 2026 <strong>Leo Club</strong> · Leadership · Experience · Opportunity
+</footer>
+
+
+<script>
+
+/* =====================================================
+   ✏️ EDIT YOUR PROJECTS HERE
+   ===================================================== */
+
+const projects = [
+
+    {
+        title: "Green Future Project",
+
+        date: "21 September 2026",
+
+        status: "completed",
+
+        statusText: "Completed",
+
+        image:
+        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=80",
+
+        description:
+        "A community environmental project focused on planting trees and creating awareness about protecting our environment.",
+
+        members: "35 Members"
+    },
+
+
+    {
+        title: "Community Clean-Up",
+
+        date: "28 September 2026",
+
+        status: "ongoing",
+
+        statusText: "Ongoing",
+
+        image:
+        "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=900&q=80",
+
+        description:
+        "Leo members working together to clean and improve a public area while encouraging environmental responsibility.",
+
+        members: "28 Members"
+    },
+
+
+    {
+        title: "School Donation Program",
+
+        date: "10 October 2026",
+
+        status: "upcoming",
+
+        statusText: "Upcoming",
+
+        image:
+        "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=900&q=80",
+
+        description:
+        "An upcoming community service initiative supporting students with essential educational materials.",
+
+        members: "40 Members"
+    }
+
+];
+
+
+/* =====================================================
+   DO NOT EDIT BELOW
+   ===================================================== */
+
+const container = document.getElementById("projectContainer");
+
+function displayProjects(filter="all"){
+
+    container.innerHTML="";
+
+    const filtered = projects.filter(project =>
+        filter === "all" || project.status === filter
+    );
+
+    if(filtered.length === 0){
+
+        container.innerHTML =
+        `<div class="empty">No projects found.</div>`;
+
+        return;
+    }
+
+    filtered.forEach(project => {
+
+        const card = document.createElement("article");
+
+        card.className="card";
+
+        card.innerHTML = `
+
+            <div class="card-image">
+
+                <img src="${project.image}"
+                     alt="${project.title}">
+
+                <div class="status">
+                    ${project.statusText}
+                </div>
+
+            </div>
+
+            <div class="card-content">
+
+                <div class="date">
+                    📅 ${project.date}
+                </div>
+
+                <h2>
+                    ${project.title}
+                </h2>
+
+                <p>
+                    ${project.description}
+                </p>
+
+                <div class="info">
+                    <span>👥 ${project.members}</span>
+                    <span>🦁 Leo Club</span>
+                </div>
+
+                <a href="#"
+                   class="details"
+                   onclick="return false;">
+                   View Project →
+                </a>
+
+            </div>
+        `;
+
+        container.appendChild(card);
+
+    });
+}
+
+
+function filterProjects(type,button){
+
+    document.querySelectorAll(".filter-btn")
+    .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+
+    displayProjects(type);
+}
+
+
+displayProjects();
+
+</script>
+
+</body>
+</html>
+
